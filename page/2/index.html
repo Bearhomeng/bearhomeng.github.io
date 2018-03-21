@@ -1,17 +1,11 @@
-
- <!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   
-    <title>Bearhomeng 的生活</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="Bearhomeng">
-    
-
-    
-    <meta name="description" content="学习总结 思考感悟 知识存储">
+  <title>Bearhomeng 的生活</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="学习总结 思考感悟 知识存储">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bearhomeng 的生活">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
@@ -21,693 +15,1540 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bearhomeng 的生活">
 <meta name="twitter:description" content="学习总结 思考感悟 知识存储">
+  
+    <link rel="alternate" href="/atom.xml" title="Bearhomeng 的生活" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
 
-    
-    <link rel="alternative" href="/atom.xml" title="Bearhomeng 的生活" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-  <body>
-    <header>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-inner" class="inner">
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
       
-<div>
-		
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Bearhomeng 的生活">Bearhomeng 的生活</a></h1>
-				<h2 class="blog-motto">人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。——《悟空传》</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">主页</a></li>
-					
-						<li><a href="/categories">分类</a></li>
-					
-						<li><a href="/archives">归档</a></li>
-					
-						<li><a href="/tags">标签</a></li>
-					
-						<li><a href="/about">关于</a></li>
-					
-					<li>
- 					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main">
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2016/03/13/常见的程序分析优化技术/" title="常见的程序分析优化技术" itemprop="url">
-  
-    <h1 itemprop="name">常见的程序分析优化技术</h1>
-    
-     
-           <p itemprop="description" >常见的程序分析优化技术常量折叠（Constant Folding）在编译时识别代码中的常量表达式，并对之求值，而不是留在运行时再进行求值。例如    
-i = 320 * 200 * 32;
-现代编译器不会真的为这条语句生成两个乘法指令以及一个存储指令，而是在编译时进行求值（2,</p>
-        
-    
-    <time datetime="2016-03-13T09:31:54.000Z" itemprop="datePublished">2016-03-13</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/10/24/有趣的三门问题/" title="反直觉的“三门问题”" itemprop="url">
-  
-    <h1 itemprop="name">反直觉的“三门问题”</h1>
-    
-     
-           <p itemprop="description" >“三门问题”是什么三门问题，又称为“蒙提霍尔问题”、“蒙提霍尔悖论”。
-这个问题出自一个美国电视节目Let’s make a deal。而其名字则来自于节目主持人蒙提霍尔(Monty Hall problem)的名字。
-在电视节目中，参与者的面前有三扇门，其中一扇门背后是汽车，另</p>
-        
-    
-    <time datetime="2015-10-23T17:37:40.000Z" itemprop="datePublished">2015-10-24</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/09/11/中国计算机学会推荐国际学术刊物（计算机科学理论）/" title="中国计算机学会推荐国际学术刊物（计算机科学理论）" itemprop="url">
-  
-    <h1 itemprop="name">中国计算机学会推荐国际学术刊物（计算机科学理论）</h1>
-    
-     
-           <p itemprop="description" >A类
-
-
-序号
-刊物简称
-刊物全称
-出版社
-网址
-
-
-
-
-1
-IANDC
-Information and Computation
-Elsevier
-http://www.journals.elsevier.com/information-and-computation/
-
-
-2
-</p>
-        
-    
-    <time datetime="2015-09-11T14:45:03.000Z" itemprop="datePublished">2015-09-11</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/08/07/mysql常用命令/" title="mysql常用命令" itemprop="url">
-  
-    <h1 itemprop="name">mysql常用命令</h1>
-    
-     
-           <p itemprop="description" >一、连接Mysql格式:
-mysql -h主机地址 -u用户名 －p用户密码
-
-用户名前可以有空格也可以没有空格，但是密码前必须没有空格，否则让你重新输入密码
-
-
-连接本机上的mysql
- 键入命令
-mysql -u root -p
- 回车后提示你输密码
-
-连接到远程主机上的MY</p>
-        
-    
-    <time datetime="2015-08-07T06:11:19.000Z" itemprop="datePublished">2015-08-07</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/08/05/python计时工具/" title="python计时工具:timeit" itemprop="url">
-  
-    <h1 itemprop="name">python计时工具:timeit</h1>
-    
-     
-           <p itemprop="description" >有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。
-常规方法通常我们会这么做：
-
-将程序代码封装在一个函数中，然后再主函数中调用它
-在函数调用前打一个时间戳 t1
-在函数调用后打一个时间戳 t2
-最后，计算两个时间</p>
-        
-    
-    <time datetime="2015-08-05T13:23:13.000Z" itemprop="datePublished">2015-08-05</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/08/03/一小时掌握sqlite/" title="一小时掌握sqlite" itemprop="url">
-  
-    <h1 itemprop="name">一小时掌握sqlite</h1>
-    
-     
-           <p itemprop="description" >sqlite是什么SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。 
-与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件</p>
-        
-    
-    <time datetime="2015-08-03T03:04:27.000Z" itemprop="datePublished">2015-08-03</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/07/26/Vim学习笔记/" title="Vim学习笔记" itemprop="url">
-  
-    <h1 itemprop="name">Vim学习笔记</h1>
-    
-     
-           <p itemprop="description" >vim 是从 vi 发展出来的一个文本编辑器，在程序猿中被广泛使用。和Emacs 并列成为类 Unix 系统用户最喜欢的编辑器。
-入门Vim的模式Vim 和 vi 一样，仅仅通过键盘来在这些模式之中切换。这就使得 Vim 可以不用进行菜单或者鼠标操作，并且最小化组合键的操作。对文</p>
-        
-    
-    <time datetime="2015-07-26T06:13:32.000Z" itemprop="datePublished">2015-07-26</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/07/24/Java图形界面编程（可拔插外观样式）/" title="Java图形界面编程（Swing可拔插外观样式）" itemprop="url">
-  
-    <h1 itemprop="name">Java图形界面编程（Swing可拔插外观样式）</h1>
-    
-     
-           <p itemprop="description" >Swing可拔插式外观样式相比于 AWT ，Swing 具有一个重要的优势—— 允许开发者定制组件的外观样式。而 AWT 则只能使用底层操作系统提供的组件外观样式。
-Swing 的这个特性为美化程序外观样式提供了足够的灵活性。
-该特性被称为 可拔插式外观样式（pluggable </p>
-        
-    
-    <time datetime="2015-07-24T14:19:26.000Z" itemprop="datePublished">2015-07-24</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/05/28/VPS主机搭建VPN/" title="VPS主机搭建VPN" itemprop="url">
-  
-    <h1 itemprop="name">VPS主机搭建VPN</h1>
-    
-     
-           <p itemprop="description" >概述当你拥有一台国外的VPS的时候，你就可以用来搭建VPN，然后就能翻墙了（翻墙你都不知道的话，先去百度下吧）。PS：写完我才发现，一般人还是看不懂的。
-搭建VPN的主要分为两个步骤：
-
-安装pptpd，并配置
-安装iptables,配置iptables
-
-名词解释pptpd:p</p>
-        
-    
-    <time datetime="2015-05-28T13:06:45.000Z" itemprop="datePublished">2015-05-28</time>
-  </a>
-</section>
-
-
-
-
-
-
-  
-<section class="post" itemscope itemprop="blogitem">
-  
-    <a href="/2015/05/26/如何搭建一个一年只需4美刀的VPN（搞机篇）/" title="如何搭建一个一年只需4美元的VPN" itemprop="url">
-  
-    <h1 itemprop="name">如何搭建一个一年只需4美元的VPN</h1>
-    
-     
-           <p itemprop="description" >概述今天教大家怎么搭建一个一年只需要4刀的VPN服务器。大家只需照做，就可以建立一个属于自己的VPN服务器，然后通过VPN登录，就可以访问国外的网络，虽然速度有时候不太稳定，但对于查询资料，或是上FB，twitter而言足够。另外，这里搭建的VPN服务器，所有的设备都可以登录使用</p>
-        
-    
-    <time datetime="2015-05-26T12:29:58.000Z" itemprop="datePublished">2015-05-26</time>
-  </a>
-</section>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix unexpand">
-    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
-  </nav>
-
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-
-
-  
-<div class="categorieslist">
-	<p class="asidetitle">分类</p>
-		<ul>
-		
-		  
-			<li><a href="/categories/Java/" title="Java">Java<sup>4</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/工具/" title="工具">工具<sup>2</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/工具-教程/" title="工具 教程">工具 教程<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/建筑学/" title="建筑学">建筑学<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/感悟/" title="感悟">感悟<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/技巧/" title="技巧">技巧<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/数据库/" title="数据库">数据库<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/机器学习/" title="机器学习">机器学习<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/概率统计/" title="概率统计">概率统计<sup>1</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/程序分析/" title="程序分析">程序分析<sup>2</sup></a></li>
-		  
-		
-		  
-			<li><a href="/categories/计算机科学理论/" title="计算机科学理论">计算机科学理论<sup>1</sup></a></li>
-		  
-		
-		</ul>
-</div>
-
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/工具-科学上网/" title="工具 科学上网">工具 科学上网<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/sqlite/" title="sqlite">sqlite<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/linux-服务器管理/" title="linux 服务器管理">linux 服务器管理<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Java-图形界面编程/" title="Java 图形界面编程">Java 图形界面编程<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/代码模板/" title="代码模板">代码模板<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/并行计算-GPU/" title="并行计算 GPU">并行计算 GPU<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/简历/" title="简历">简历<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/学术论文/" title="学术论文">学术论文<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/建筑学-艺术-建筑史/" title="建筑学 艺术 建筑史">建筑学 艺术 建筑史<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/机器学习-machine-learning/" title="机器学习 machine learning">机器学习 machine learning<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/感悟/" title="感悟">感悟<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/技术/" title="技术">技术<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/实用命令/" title="实用命令">实用命令<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/MiniSAT/" title="MiniSAT">MiniSAT<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
-          <li>
-            
-            	<a href="http://wulijun.github.io/php-the-right-way/" target="_blank" title="PHP之道">PHP之道</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
-
-</aside>
-</div>
     </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Hello ,I&#39;m Gavin in ECNU. <br/>
-			This is my blog,believe it or not.</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<a href="mailto:xiong.jia.wen@163.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-			
-		
-
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
-		
-		<a href="/about" target="_blank" title="Bearhomeng">Bearhomeng</a>
-		
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Bearhomeng 的生活</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。——《悟空传》</a>
+        </h2>
+      
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
   
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+    <article id="post-常见的程序分析优化技术" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/13/常见的程序分析优化技术/" class="article-date">
+  <time datetime="2016-03-13T09:31:54.000Z" itemprop="datePublished">2016-03-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/程序分析/">程序分析</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
         
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/13/常见的程序分析优化技术/">常见的程序分析优化技术</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h1 id="常见的程序分析优化技术"><a href="#常见的程序分析优化技术" class="headerlink" title="常见的程序分析优化技术"></a>常见的程序分析优化技术</h1><h2 id="常量折叠（Constant-Folding）"><a href="#常量折叠（Constant-Folding）" class="headerlink" title="常量折叠（Constant Folding）"></a>常量折叠（Constant Folding）</h2><p>在编译时识别代码中的常量表达式，并对之求值，而不是留在运行时再进行求值。<br>例如    </p>
+<pre><code>i = 320 * 200 * 32;
+</code></pre><p>现代编译器不会真的为这条语句生成两个乘法指令以及一个存储指令，而是在编译时进行求值（2,048,000），然后用这个值直接进行替换。<br>而在</p>
+<pre><code>0*x
+</code></pre><p>语句中，即使编译器不知道 <code>x</code> 变量的值，它也能用 0 对表达式进行替换</p>
+<p>而常量折叠也不仅仅能够在数值计算中使用，也能在字符串连接运算中使用。</p>
+<pre><code>&quot;abc&quot;+ &quot;def&quot;
+</code></pre><p>会被替换为</p>
+<pre><code>&quot;abcdef&quot;
+</code></pre><p>常量折叠可以在编译器前端高级语言的中间表示树期间，也就是在翻译成三地址指令之前完成，或者在编译器后端作为常量传播的辅助。</p>
+<blockquote>
+<p>注意: 存在交叉编译的情况，这时候需要考虑在不同的架构中，浮点数的精度存在差异，盲目进行常量折叠可能导致宿主机于目标主机的算术计算不一致的情况。</p>
+</blockquote>
+<h2 id="常量传播（Constant-Propagation）"><a href="#常量传播（Constant-Propagation）" class="headerlink" title="常量传播（Constant Propagation）"></a>常量传播（Constant Propagation）</h2><p>常量传递是在编译期间用常量的值替换代码表达式中常量的过程。</p>
+<pre><code>int x =14;
+int y = 7 - x / 2;
+return y * (28 / x + 2);
+</code></pre><p>传递 x 后：</p>
+<pre><code>int x = 14;
+int y = 7 - 14 / 2;
+return y * (28/x + 2);
+</code></pre><p>继续传递 y 后：</p>
+<pre><code>int x = 14;
+int y  = 0;
+return 0;
+</code></pre><p>（未完待续）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/03/13/常见的程序分析优化技术/" data-id="cjf0surc200137kn5mlcid2up" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-有趣的三门问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/24/有趣的三门问题/" class="article-date">
+  <time datetime="2015-10-23T17:37:40.000Z" itemprop="datePublished">2015-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/概率统计/">概率统计</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/24/有趣的三门问题/">反直觉的“三门问题”</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="“三门问题”是什么"><a href="#“三门问题”是什么" class="headerlink" title="“三门问题”是什么"></a>“三门问题”是什么</h2><p>三门问题，又称为“蒙提霍尔问题”、“蒙提霍尔悖论”。</p>
+<p>这个问题出自一个美国电视节目Let’s make a deal。而其名字则来自于节目主持人蒙提霍尔(Monty Hall problem)的名字。</p>
+<p>在电视节目中，参与者的面前有三扇门，其中一扇门背后是汽车，另外两扇门背后是山羊。</p>
+<p>参与者只能选择打开其中一扇门，如果门背后的是汽车，那么参与者就可以得到它，如果是羊，那么什么都不会得到。</p>
+<p>然而，在参与者做出选择后，主持人已知三扇门后藏了什么的情况下，打开另外两扇门中的其中一扇，背后的是一只羊。</p>
+<p>随后，主持人问参赛者，要不要改变选择，去选另一扇门。</p>
+<h2 id="问题关键"><a href="#问题关键" class="headerlink" title="问题关键"></a>问题关键</h2><p><strong>那么问题就是：有没有必要去更改选择？选择另一扇门是否更有利？</strong></p>
+<h2 id="错误的直觉"><a href="#错误的直觉" class="headerlink" title="错误的直觉"></a>错误的直觉</h2><p>有的人可能会想：换不换选择，选中的可能性都为<code>三分之一</code>，意义不大。</p>
+<p>还有的人认为：在主持人剔除一个选择后，更换选择后，抽中的概率从<code>三分之一</code>上升为 <code>二分之一</code>。<em>这种思维很诡异，如果说概率提高了，那应该是两个剩余的选项都提高，那么其实剩余两扇门抽中汽车的概率应该是相等的，换不换依旧是没有意义的。</em></p>
+<h2 id="那么到底改不改换"><a href="#那么到底改不改换" class="headerlink" title="那么到底改不改换"></a>那么到底改不改换</h2><p>神秘主义的人可能会这么想</p>
+<blockquote>
+<p>反正换不换都一样，不如换着试试，指不定真中了呢。</p>
+</blockquote>
+<p>阴谋论的人大概会这么想</p>
+<blockquote>
+<p>不对！你这么说，肯定想唬我，不想让我得到那辆车…坚决不换！</p>
+</blockquote>
+<p>天秤座则陷入痛苦不堪的选择的简谐振动之中</p>
+<blockquote>
+<p>换？不换？换？不换…啊啊啊，到底选哪个好，好纠结。</p>
+</blockquote>
+<h3 id="“政治”正确的做法"><a href="#“政治”正确的做法" class="headerlink" title="“政治”正确的做法"></a>“政治”正确的做法</h3><p>当然是换，我们不能以小人之心度君子之腹，主持人这么做，必有深意。换一换，得之我命，失之也就一句“我X”的事。赌一把吧。</p>
+<p>好吧，严肃点，不开玩笑了。我们做一个选择，必须还是要理性，虽然随机的貌似更有趣，但面对人生大事的时候可不能马虎啊。</p>
+<h4 id="解法一（枚举法）："><a href="#解法一（枚举法）：" class="headerlink" title="解法一（枚举法）："></a>解法一（枚举法）：</h4><pre><code>1. 假如汽车在第一次选择的门背后，那么第二次
+    a. 选择不换，那么必能得到汽车，中奖概率为 1
+    b. 选择换，那么必不能得到汽车，中奖概率为 0
+
+2. 假如汽车不在第一次选择的门背后，那么第二次
+    a. 选择不换，那么必不能得到汽车，中奖概率为 0
+    b. 选择换，那么必能得到汽车，中奖概率为 1
+
+综合计算下，第二次变更选择的情况下，中奖概率是多少：
+    第一种情况下概率：
+        1/3 * 0 = 0
+    第二种情况下概率：
+        2/3 * 1 = 2/3
+    综合概率：
+        0 + 2/3 = 2/3
+</code></pre><p>显然，不换的情况下，我们中奖的概率在第一次就决定了，为 <code>三分之一</code>，而如果修改选择，我们中奖的概率则提升到了 <code>三分之二</code> ，当然选择换。</p>
+<blockquote>
+<p>⊙▂⊙，枚举法是不是太蠢了点。如果给一百扇门让我选，我当时就要吓懵比了。当然，其实并不会。那么有没有更直观的方法呢。</p>
+</blockquote>
+<h4 id="解法二："><a href="#解法二：" class="headerlink" title="解法二："></a>解法二：</h4><pre><code>我们可以知道，三扇门每扇门背后是汽车的概率都是 三分之一 。
+
+那么在我们选出一扇门后，这扇门的中奖概率为 三分之一 ，另外两扇门的中奖概率之和就是 三分之二 。 在主持人帮我们剔除其中一个错误选择后， 则相当于：
+
+    原来 三分之二 的概率 被剩下的一扇门 “继承” 了。
+
+聪明的我们当然应该 改选 这扇更有 “前途” 的门。
+
+“ WHAT？!发生了什么。什么叫继承了概率？什么鬼？！ ”
+
+其实可以这么理解： 
+    我们第一次选择时，如果选择另外的两扇门的组合，则获奖概率是 三分之二，然而规则是不允许我们选两扇门的。
+
+    正当我们纠结的时候，善解人意的主持人很配合地为我们剔除了其中一个不会中奖的选项，那么我们就能选那个 “组合” 了，(哦，卖狗的，天上掉馅饼了！ 那两个门突然合并成了一个门了！)，那么剩下的那扇门代表的是依然是 三分之二 的中奖概率。
+</code></pre><h3 id="继承到底是怎么回事？"><a href="#继承到底是怎么回事？" class="headerlink" title="继承到底是怎么回事？"></a>继承到底是怎么回事？</h3><p>如果原来是 <code>n</code> 扇门的话，那么，第一次选择的门中奖概率为 <code>1 / n</code> , 而剩下门中奖概率之和则为 <code>(n-1) / n</code>。</p>
+<p>主持人帮我们消除其中一扇门之后，中奖概率应该怎么继承？当然应该由剩下的 <code>n-2</code> 门均分，那么剩下的每扇门的中奖概率变成了 <code>((n-1) / n) / (n-2)</code> 。</p>
+<p>那么，剩余的 <code>n-2</code> 扇门的中奖概率提升为原来的 <code>(n-1) / (n-2)</code>倍了，即 <code>1 + 1 / (n-2)</code>。</p>
+<p>这么看来，三扇门的问题只是其中一个具体问题。将 <code>n=3</code> 代入，则剩下的 一<code>(3-2)</code> 扇门的概率上升为原来的 两倍<code>(1 + 1 / (3-2))</code>倍了，这个时候，谁不换谁傻。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个问题关键在于，主持人是知道门背后藏有什么的。</p>
+<p>我们可以理解为，当一个随机系统引入了一个不随机的因素，整个系统就不能单纯当作随机系统来看了。</p>
+<p>所以换不换，是要仔细思考的问题。2B or not 2B , that’s a question !</p>
+<p>嗯，做人要有理想，但还需要根据现实情况来改变自己的理想，不能一味地盲目坚持。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/24/有趣的三门问题/" data-id="cjf0surc7001a7kn5jkq4ub2s" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-中国计算机学会推荐国际学术刊物（计算机科学理论）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/11/中国计算机学会推荐国际学术刊物（计算机科学理论）/" class="article-date">
+  <time datetime="2015-09-11T14:45:03.000Z" itemprop="datePublished">2015-09-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/计算机科学理论/">计算机科学理论</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/11/中国计算机学会推荐国际学术刊物（计算机科学理论）/">中国计算机学会推荐国际学术刊物（计算机科学理论）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="A类"><a href="#A类" class="headerlink" title="A类"></a>A类</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>刊物简称</th>
+<th>刊物全称</th>
+<th>出版社</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>IANDC</td>
+<td>Information and Computation</td>
+<td>Elsevier</td>
+<td><a href="http://www.journals.elsevier.com/information-and-computation/" target="_blank" rel="noopener">http://www.journals.elsevier.com/information-and-computation/</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>SICOMP</td>
+<td>SIAM Journal on Computing</td>
+<td>SIAM</td>
+<td><a href="http://epubs.siam.org/journal/smjcat" target="_blank" rel="noopener">http://epubs.siam.org/journal/smjcat</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="B类"><a href="#B类" class="headerlink" title="B类"></a>B类</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>刊物简称</th>
+<th>刊物全称</th>
+<th>出版社</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>TALG</td>
+<td>ACM Transactions on Algorithms</td>
+<td>ACM</td>
+<td><a href="http://talg.acm.org/" target="_blank" rel="noopener">http://talg.acm.org/</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>TOCL</td>
+<td>ACM Transactions on Computational Logic</td>
+<td>ACM</td>
+<td><a href="http://tocl.acm.org/" target="_blank" rel="noopener">http://tocl.acm.org/</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>TOMS</td>
+<td>ACM Transactions on Mathematical Software</td>
+<td>ACM</td>
+<td><a href="http://toms.acm.org/" target="_blank" rel="noopener">http://toms.acm.org/</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>Algorithmica</td>
+<td>Springer</td>
+<td><a href="http://www.springerlink.com/content/100117/" target="_blank" rel="noopener">http://www.springerlink.com/content/100117/</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>Computational complexity</td>
+<td>Springer</td>
+<td><a href="http://www.springer.com/birkhauser/computer+science/journa" target="_blank" rel="noopener">http://www.springer.com/birkhauser/computer+science/journa</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td>Formal Methods in System Design</td>
+<td>Springer</td>
+<td><a href="http://www.springerlink.com/content/1572-8102/" target="_blank" rel="noopener">http://www.springerlink.com/content/1572-8102/</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>INFORMS Journal on Computing</td>
+<td>INFORMS</td>
+<td><a href="http://www.informs.org/Pubs/IJOC" target="_blank" rel="noopener">http://www.informs.org/Pubs/IJOC</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>JCSS</td>
+<td>Journal of Computer and System Sciences</td>
+<td>Elsevier</td>
+<td><a href="http://www.journals.elsevier.com/journal-of-computer-and-system-sciences/" target="_blank" rel="noopener">http://www.journals.elsevier.com/journal-of-computer-and-system-sciences/</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>JGO</td>
+<td>Journal of Global Optimization</td>
+<td>Springer</td>
+<td><a href="http://link.springer.com/journal/10898" target="_blank" rel="noopener">http://link.springer.com/journal/10898</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td></td>
+<td>Journal of Symbolic Computation</td>
+<td>Elsevier</td>
+<td><a href="http://www.elsevier.com/wps/find/journaldescription.cws_home/622902/description" target="_blank" rel="noopener">http://www.elsevier.com/wps/find/journaldescription.cws_home/622902/description</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>MSCS</td>
+<td>Mathematical Structures in Computer Science</td>
+<td>Cambridge University Press</td>
+<td><a href="http://journals.cambridge.org/action/displayJournal?jid=MSC" target="_blank" rel="noopener">http://journals.cambridge.org/action/displayJournal?jid=MSC</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>TCS</td>
+<td>Theoretical Computer Science</td>
+<td>Elsevier</td>
+<td><a href="http://www.journals.elsevier.com/theoretical-computer-science/" target="_blank" rel="noopener">http://www.journals.elsevier.com/theoretical-computer-science/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="C类"><a href="#C类" class="headerlink" title="C类"></a>C类</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>刊物简称</th>
+<th>刊物全称</th>
+<th>出版社</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>Annals of Pure and Applied Logic</td>
+<td>Elsevierc</td>
+<td><a href="http://www.sciencedirect.com/science/journal/01680072" target="_blank" rel="noopener">http://www.sciencedirect.com/science/journal/01680072</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>Acta Informatica</td>
+<td>Springer</td>
+<td><a href="http://www.springerlink.com/content/100460/" target="_blank" rel="noopener">http://www.springerlink.com/content/100460/</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>Discrete Applied Mathematics</td>
+<td>Elsevier</td>
+<td><a href="http://www.elsevier.com/wps/find/journaldescription.cws_home/505609/description" target="_blank" rel="noopener">http://www.elsevier.com/wps/find/journaldescription.cws_home/505609/description</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>Fundamenta Informaticae</td>
+<td>IOS Press</td>
+<td><a href="http://fi.mimuw.edu.pl/index.php/FI/index" target="_blank" rel="noopener">http://fi.mimuw.edu.pl/index.php/FI/index</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>Higher-Order and Symbolic Computation</td>
+<td>Springer</td>
+<td><a href="http://springerlink.metapress.com/content/1573-0557/" target="_blank" rel="noopener">http://springerlink.metapress.com/content/1573-0557/</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>Information Processing Letters</td>
+<td>Elsevier</td>
+<td><a href="http://www.journals.elsevier.com/information-processing-letters/#" target="_blank" rel="noopener">http://www.journals.elsevier.com/information-processing-letters/#</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>JCOMPLEXITY</td>
+<td>Journal of Complexity</td>
+<td>Elsevier</td>
+<td><a href="http://www.journals.elsevier.com/journal-of-complexity/" target="_blank" rel="noopener">http://www.journals.elsevier.com/journal-of-complexity/</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>LOGCOM</td>
+<td>Journal of Logic and Computation</td>
+<td>Oxford University Press</td>
+<td><a href="http://logcom.oxfordjournals.org/" target="_blank" rel="noopener">http://logcom.oxfordjournals.org/</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+<td>Journal of Symbolic Logic</td>
+<td>Association for Symbolic Logic</td>
+<td><a href="http://www.aslonline.org/journals-journal.html" target="_blank" rel="noopener">http://www.aslonline.org/journals-journal.html</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>LMCS</td>
+<td>Logical Methods in Computer Science</td>
+<td>LMCS</td>
+<td><a href="http://www.lmcs-online.org/index.php" target="_blank" rel="noopener">http://www.lmcs-online.org/index.php</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>SIDMA</td>
+<td>SIAM Journal on Discrete Mathematics</td>
+<td>SIAM</td>
+<td><a href="http://www.siam.org/journals/sidma.php" target="_blank" rel="noopener">http://www.siam.org/journals/sidma.php</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td>Theory of Computing Systems</td>
+<td>Springer</td>
+<td><a href="http://www.springerlink.com/content/1433-0490/" target="_blank" rel="noopener">http://www.springerlink.com/content/1433-0490/</a></td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/09/11/中国计算机学会推荐国际学术刊物（计算机科学理论）/" data-id="cjf0surby000x7kn5f1qqd9tr" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学术论文/">学术论文</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-mysql常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/07/mysql常用命令/" class="article-date">
+  <time datetime="2015-08-07T06:11:19.000Z" itemprop="datePublished">2015-08-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教程/">教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/07/mysql常用命令/">mysql常用命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="一、连接Mysql"><a href="#一、连接Mysql" class="headerlink" title="一、连接Mysql"></a>一、连接Mysql</h2><p><strong>格式:</strong></p>
+<pre><code>mysql -h主机地址 -u用户名 －p用户密码
+</code></pre><blockquote>
+<p>用户名前可以有空格也可以没有空格，但是密码前必须没有空格，否则让你重新输入密码</p>
+</blockquote>
+<ol>
+<li><p>连接本机上的mysql</p>
+<p> 键入命令</p>
+<pre><code>mysql -u root -p
+</code></pre><p> 回车后提示你输密码</p>
+</li>
+<li><p>连接到远程主机上的MYSQL</p>
+<p> 假设远程主机的IP为：110.110.110.110，用户名为root,密码为abcd123。则键入以下命令：</p>
+<pre><code>mysql -h110.110.110.110 -u root -pabcd123
+</code></pre></li>
+</ol>
+<h2 id="二、修改密码"><a href="#二、修改密码" class="headerlink" title="二、修改密码"></a>二、修改密码</h2><p><strong>格式</strong></p>
+<pre><code>mysqladmin -u用户名 -p旧密码 password 新密码
+</code></pre><ol>
+<li><p>给root加个密码ab12</p>
+<p> mysqladmin -u root -password ab12</p>
+<blockquote>
+<p>因为开始时root没有密码，所以-p旧密码一项就可以省略了。</p>
+</blockquote>
+</li>
+<li><p>再将root的密码改为djg345</p>
+<pre><code>mysqladmin -u root -p ab12 password djg345
+</code></pre></li>
+</ol>
+<h2 id="三、增加新用户"><a href="#三、增加新用户" class="headerlink" title="三、增加新用户"></a>三、增加新用户</h2><p><strong>格式</strong></p>
+<pre><code>grant select on 数据库.* to 用户名@登录主机 identified by &quot;密码&quot;
+</code></pre><ol>
+<li><p>增加一个用户test1密码为abc，让他可以在任何主机上登录，并对所有数据库有查询、插入、修改、删除的权限。首先用root用户连入MYSQL，然后键入以下命令：</p>
+<pre><code>grant select,insert,update,delete on *.* to test1@&quot;%&quot; Identified by &quot;abc&quot;;
+</code></pre></li>
+<li><p>增加一个用户test2密码为abc,让他只可以在localhost上登录，并可以对数据库mydb进行查询、插入、修改、删除的操作（localhost指本地主机，即MYSQL数据库所在的那台主机）</p>
+<pre><code>grant select,insert,update,delete on mydb.* to test2@localhost identified by &quot;abc&quot;;
+</code></pre></li>
+<li><p>如果你不想test2有密码，可以再打一个命令将密码消掉。</p>
+<pre><code>grant select,insert,update,delete on mydb.* to test2@localhost identified by &quot;&quot;;
+</code></pre></li>
+</ol>
+<h2 id="四、相关信息查看"><a href="#四、相关信息查看" class="headerlink" title="四、相关信息查看"></a>四、相关信息查看</h2><h3 id="显示当前数据库服务器中的数据库列表"><a href="#显示当前数据库服务器中的数据库列表" class="headerlink" title="显示当前数据库服务器中的数据库列表"></a>显示当前数据库服务器中的数据库列表</h3><pre><code>mysql&gt; SHOW DATABASES;
+</code></pre><blockquote>
+<p>注意：mysql库里面有MYSQL的系统信息，我们改密码和新增用户，实际上就是用这个库进行操作。</p>
+</blockquote>
+<h3 id="显示数据库中的数据表"><a href="#显示数据库中的数据表" class="headerlink" title="显示数据库中的数据表"></a>显示数据库中的数据表</h3><pre><code>mysql&gt; USE 库名；
+mysql&gt; SHOW TABLES;
+</code></pre><h3 id="显示数据表的结构"><a href="#显示数据表的结构" class="headerlink" title="显示数据表的结构"></a>显示数据表的结构</h3><pre><code>mysql&gt; DESCRIBE 表名;
+</code></pre><h3 id="显示use的数据库名"><a href="#显示use的数据库名" class="headerlink" title="显示use的数据库名"></a>显示use的数据库名</h3><pre><code>mysql&gt; SELECT DATABASE();
+</code></pre><h3 id="显示当前的user"><a href="#显示当前的user" class="headerlink" title="显示当前的user"></a>显示当前的user</h3><pre><code>mysql&gt; SELECT USER();
+</code></pre><h2 id="五、数据库操作"><a href="#五、数据库操作" class="headerlink" title="五、数据库操作"></a>五、数据库操作</h2><h3 id="建立数据库"><a href="#建立数据库" class="headerlink" title="建立数据库"></a>建立数据库</h3><pre><code>mysql&gt; CREATE DATABASE 库名;
+</code></pre><h3 id="建立数据表"><a href="#建立数据表" class="headerlink" title="建立数据表"></a>建立数据表</h3><pre><code>mysql&gt; USE 库名;
+mysql&gt; CREATE TABLE 表名 (字段名 VARCHAR(20), 字段名 CHAR(1));
+</code></pre><h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><pre><code>mysql&gt; DROP DATABASE 库名;
+</code></pre><h3 id="删除数据表"><a href="#删除数据表" class="headerlink" title="删除数据表"></a>删除数据表</h3><pre><code>mysql&gt; DROP TABLE 表名；
+</code></pre><h3 id="将表中记录清空"><a href="#将表中记录清空" class="headerlink" title="将表中记录清空"></a>将表中记录清空</h3><pre><code>mysql&gt; DELETE FROM 表名;
+</code></pre><h3 id="显示表中的记录"><a href="#显示表中的记录" class="headerlink" title="显示表中的记录"></a>显示表中的记录</h3><pre><code>mysql&gt; SELECT * FROM 表名;
+</code></pre><h3 id="往表中插入记录"><a href="#往表中插入记录" class="headerlink" title="往表中插入记录"></a>往表中插入记录</h3><pre><code>mysql&gt; INSERT INTO 表名 VALUES (&quot;hyq&quot;,&quot;M&quot;);
+</code></pre><h3 id="更新表中数据"><a href="#更新表中数据" class="headerlink" title="更新表中数据"></a>更新表中数据</h3><pre><code>mysql-&gt; UPDATE 表名 SET 字段名1=&apos;a&apos;,字段名2=&apos;b&apos; WHERE 字段名3=&apos;c&apos;;
+</code></pre><h3 id="用文本方式将数据装入数据表中"><a href="#用文本方式将数据装入数据表中" class="headerlink" title="用文本方式将数据装入数据表中"></a>用文本方式将数据装入数据表中</h3><pre><code>mysql&gt; LOAD DATA LOCAL INFILE &quot;D:/mysql.txt&quot; INTO TABLE 表名;
+</code></pre><h3 id="导入-sql文件命令"><a href="#导入-sql文件命令" class="headerlink" title="导入.sql文件命令"></a>导入.sql文件命令</h3><pre><code>mysql&gt; USE 数据库名;
+mysql&gt; SOURCE d:/mysql.sql;
+</code></pre><h3 id="命令行修改root密码"><a href="#命令行修改root密码" class="headerlink" title="命令行修改root密码"></a>命令行修改root密码</h3><pre><code>mysql&gt; UPDATE mysql.user SET password=PASSWORD(&apos;新密码&apos;) WHERE User=&apos;root&apos;;
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre><h2 id="六、一个建库和建表以及插入数据的实例"><a href="#六、一个建库和建表以及插入数据的实例" class="headerlink" title="六、一个建库和建表以及插入数据的实例"></a>六、一个建库和建表以及插入数据的实例</h2><pre><code>drop database if exists school; //如果存在SCHOOL则删除
+create database school; //建立库SCHOOL
+use school; //打开库SCHOOL
+create table teacher //建立表TEACHER
+(
+id int(3) auto_increment not null primary key,
+name char(10) not null,
+address varchar(50) default &apos;深圳&apos;,
+year date
+); //建表结束
+//以下为插入字段
+insert into teacher values(&apos;&apos;,&apos;allen&apos;,&apos;大连一中&apos;,&apos;1976-10-10&apos;);
+insert into teacher values(&apos;&apos;,&apos;jack&apos;,&apos;大连二中&apos;,&apos;1975-12-23&apos;);
+</code></pre><p>如果你在mysql提示符键入上面的命令也可以，但不方便调试。</p>
+<ol>
+<li><p>你可以将以上命令原样写入一个文本文件中，假设为school.sql，然后复制到c:\下，并在DOS状态进入目录\mysql\bin，然后键入以下命令：</p>
+<pre><code>mysql -uroot -p密码 &lt; c:\\school.sql
+</code></pre><p> 如果成功，空出一行无任何显示；如有错误，会有提示。（以上命令已经调试，你只要将//的注释去掉即可使用）。</p>
+</li>
+<li><p>或者进入命令行后使用 </p>
+<pre><code>mysql&gt; source c:\\school.sql; 
+</code></pre><p> 也可以将school.sql文件导入数据库中。</p>
+</li>
+</ol>
+<h3 id="将文本数据转到数据库中"><a href="#将文本数据转到数据库中" class="headerlink" title="将文本数据转到数据库中"></a>将文本数据转到数据库中</h3><ol>
+<li><p>文本数据应符合的格式：字段数据之间用tab键隔开，null值用\n来代替.例：</p>
+<pre><code>3 rose 大连二中 1976-10-10
+4 mike 大连一中 1975-12-23
+</code></pre><p> 假设你把这两组数据存为school.txt文件，放在c盘根目录下。</p>
+</li>
+<li><p>数据传入命令 </p>
+<pre><code>load data local infile &quot;c:\\school.txt&quot; into table 表名;
+</code></pre><blockquote>
+<p>注意：你最好将文件复制到\mysql\bin目录下，并且要先用use命令打表所在的库。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="备份数据库"><a href="#备份数据库" class="headerlink" title="备份数据库"></a>备份数据库</h2><h3 id="导出整个数据库"><a href="#导出整个数据库" class="headerlink" title="导出整个数据库"></a>导出整个数据库</h3><p>导出文件默认是存在mysql\bin目录下</p>
+<pre><code>mysqldump -u 用户名 -p 数据库名 &gt; 导出的文件名
+mysqldump -u user_name -p123456 database_name &gt; outfile_name.sql
+</code></pre><h3 id="导出一个表"><a href="#导出一个表" class="headerlink" title="导出一个表"></a>导出一个表</h3><pre><code>mysqldump -u 用户名 -p 数据库名 表名&gt; 导出的文件名
+mysqldump -u user_name -p database_name table_name &gt; outfile_name.sql
+</code></pre><h3 id="导出一个数据库结构"><a href="#导出一个数据库结构" class="headerlink" title="导出一个数据库结构"></a>导出一个数据库结构</h3><pre><code>mysqldump -u user_name -p -d –add-drop-table database_name &gt; outfile_name.sql
+</code></pre><blockquote>
+<p>-d 没有数据 –add-drop-table 在每个create语句之前增加一个drop table</p>
+</blockquote>
+<h3 id="带语言参数导出"><a href="#带语言参数导出" class="headerlink" title="带语言参数导出"></a>带语言参数导出</h3><pre><code>mysqldump -uroot -p –default-character-set=latin1 –set-charset=gbk –skip-opt database_name &gt; outfile_name.sql
+</code></pre><h3 id="备份数据库-1"><a href="#备份数据库-1" class="headerlink" title="备份数据库"></a>备份数据库</h3><pre><code>mysqldump -uroot -p test_db &gt; test_db.sql
+</code></pre><h3 id="恢复数据库"><a href="#恢复数据库" class="headerlink" title="恢复数据库"></a>恢复数据库</h3><pre><code>mysql -uroot -p test_db &lt; test_db.sql 
+</code></pre><h3 id="创建权限"><a href="#创建权限" class="headerlink" title="创建权限"></a>创建权限</h3><pre><code>grant all privileges on test_db.* to test_db@&apos;localhost&apos; identified by &apos;123456&apos;; 
+</code></pre><p>兼容mysql4.1之前模式： </p>
+<pre><code>update mysql.user set password=old_password(&apos;123456&apos;) where user=&apos;test_db&apos;; 
+</code></pre><h3 id="忘记密码"><a href="#忘记密码" class="headerlink" title="忘记密码"></a>忘记密码</h3><p>在 “<strong>my.cnf</strong>“ 或 “<strong>my.ini</strong>“ 文件的 “<strong>mysqld</strong>“ 配置段添加 “<strong>skip-grant-tables</strong>“ ，然后重新启动 <strong>mysql</strong> 即可登录修改 <strong>root</strong> 密码。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/07/mysql常用命令/" data-id="cjf0surbu000o7kn5catazdn8" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mysql/">mysql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-python计时工具" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/05/python计时工具/" class="article-date">
+  <time datetime="2015-08-05T13:23:13.000Z" itemprop="datePublished">2015-08-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技巧/">技巧</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/05/python计时工具/">python计时工具:timeit</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。</p>
+<h2 id="常规方法"><a href="#常规方法" class="headerlink" title="常规方法"></a>常规方法</h2><p>通常我们会这么做：</p>
+<ol>
+<li>将程序代码封装在一个函数中，然后再主函数中调用它</li>
+<li>在函数调用前打一个时间戳 t1</li>
+<li>在函数调用后打一个时间戳 t2</li>
+<li>最后，计算两个时间戳的差值 t2 - t1</li>
+<li>输出时间差</li>
+</ol>
+<h3 id="利用time模块（不推荐）。"><a href="#利用time模块（不推荐）。" class="headerlink" title="利用time模块（不推荐）。"></a>利用time模块（不推荐）。</h3><h4 id="time-localtime-time-time-time-clock-对比："><a href="#time-localtime-time-time-time-clock-对比：" class="headerlink" title="time.localtime(),  time.time(),  time.clock() 对比："></a>time.localtime(),  time.time(),  time.clock() 对比：</h4><ul>
+<li><p>time.localtime()，localtime返回的是struct_time，包含年月日，显然没有必要，更重要的是localtime()的精度依赖于time()</p>
+</li>
+<li><p>time.time()，time返回的是UTC时间（seconds since the 00:00:00 UTC on January 1）。在很多系统，包括windows下精度很差，win32下的精度只有1/18.2秒。不过在Unix/Linux系统下，time()的精度还是很高的。</p>
+</li>
+<li><p>Python的标准库手册推荐在任何系统下都尽量使用time.clock()。不过要注意是在win32系统下，这个函数返回的是真实时间（wall time），而在Unix/Linux下返回的是CPU时间。在win32下，这个函数的时间分辨率好于1微秒。</p>
+</li>
+</ul>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre><code># -*- coding: utf-8 -*-
+#!/bin/env python
+def test():
+    L=[]
+    for i in range(100):
+        L.append(i)
+if __name__==&apos;__main__&apos;:
+    from time import clock
+    start=clock()
+    for i in range(10000):
+        test()
+    finish=clock()
+    print (finish-start)/10000
+</code></pre><h4 id="执行结果为"><a href="#执行结果为" class="headerlink" title="执行结果为"></a>执行结果为</h4><pre><code>0.00032365431221
+</code></pre><p>这样倒是没什么问题，但有时候就比较麻烦，比如想要测试多次，就需要再套一层循环。</p>
+<p>而在 <code>python</code> 中，提供了一个名为 <code>timeit</code> 的计时工具。</p>
+<h2 id="timeit模块"><a href="#timeit模块" class="headerlink" title="timeit模块"></a>timeit模块</h2><h3 id="Timer"><a href="#Timer" class="headerlink" title="Timer"></a>Timer</h3><p><code>timeit</code> 模块定义了一个 <code>Timer类</code>。该类接收两个参数。</p>
+<ul>
+<li>第一个参数，是你要计时的语句和函数；</li>
+<li>第二个参数，是为第一个参数语句构建环境的导入语句</li>
+</ul>
+<p>创建 <code>Timer</code> 类后，即可调用 <code>timeit</code> 方法进行计时。</p>
+<ul>
+<li>接受一个参数作为被计时语句的调用次数，默认为一百万次</li>
+<li>返回所耗费的秒数</li>
+</ul>
+<p>另一个可以调用的方法为 <code>repeat</code> 。</p>
+<ul>
+<li>接收两个参数。第一个参数为整个测试试验的次数，第二个参数为测试的次数。</li>
+<li>返回每次试验的结果</li>
+</ul>
+<h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><pre><code># -*- coding: utf-8 -*-
+#!/bin/env python
+def test1():
+    n=0
+    for i in range(101):
+        n+=i
+    return n
+def test2():
+    return sum(range(101))
+def test3():
+    return sum(x for x in range(101))
+if __name__==&apos;__main__&apos;:
+    from timeit import Timer
+    t1=Timer(&quot;test1()&quot;,&quot;from __main__ import test1&quot;)
+    t2=Timer(&quot;test2()&quot;,&quot;from __main__ import test2&quot;)
+    t3=Timer(&quot;test3()&quot;,&quot;from __main__ import test3&quot;)
+    print t1.timeit(10000)
+    print t2.timeit(10000)
+    print t3.timeit(10000)
+    print t1.repeat(3,10000)
+    print t2.repeat(3,10000)
+    print t3.repeat(3,10000)
+</code></pre><h4 id="结果如下"><a href="#结果如下" class="headerlink" title="结果如下"></a>结果如下</h4><pre><code>3.21831489756
+0.109082858296
+4.83077821343
+[3.2328774327463403, 3.200496361967792, 3.219513164382626]
+[0.11024445844373787, 0.10911708052280389, 0.10891761383080834]
+[4.817947811802895, 4.892466221265554, 5.003930946530911]
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/05/python计时工具/" data-id="cjf0surbt000l7kn520jlb6g6" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-一小时掌握sqlite" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/03/一小时掌握sqlite/" class="article-date">
+  <time datetime="2015-08-03T03:04:27.000Z" itemprop="datePublished">2015-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/03/一小时掌握sqlite/">一小时掌握sqlite</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="sqlite是什么"><a href="#sqlite是什么" class="headerlink" title="sqlite是什么"></a>sqlite是什么</h2><p>SQLite 是一个开源的<strong>嵌入式</strong>关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是<strong>高度便携、使用方便、结构紧凑、高效、可靠</strong>。 </p>
+<p>与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件存在即可开始创建、连接和使用数据库。<strong>即不用额外安装数据库软件即可使用数据。</strong></p>
+<p>如果您正在寻找一个嵌入式数据库项目或解决方案，SQLite是绝对值得考虑。</p>
+<h2 id="sqlite安装"><a href="#sqlite安装" class="headerlink" title="sqlite安装"></a>sqlite安装</h2><h3 id="windows-环境"><a href="#windows-环境" class="headerlink" title="windows 环境"></a>windows 环境</h3><ol>
+<li><p>进入<a href="http://www.sqlite.org/download.html" target="_blank" rel="noopener">下载页面</a> ，下载windows预编译 (Precompiled Binaries for Windows) 的二进制文件包。</p>
+<pre><code>sqlite-shell-win32-x86-&lt;build#&gt;.zip
+sqlite-dll-win32-x86-&lt;build#&gt;.zip
+</code></pre><blockquote>
+<p>注意: &lt;build#&gt; 是 sqlite 的编译版本号</p>
+</blockquote>
+</li>
+<li><p>将 zip 文件解压到你的磁盘，并将解压后的目录添加到系统的 PATH 变量中，以方便在命令行中执行 sqlite 命令。</p>
+</li>
+<li><p>可选: 如果你计划发布基于 sqlite 数据库的应用程序，你还需要下载源码 (Source Code) 以便编译和利用其 API</p>
+<pre><code>sqlite-amalgamation-&lt;build#&gt;.zip
+</code></pre></li>
+</ol>
+<h3 id="Linux-环境"><a href="#Linux-环境" class="headerlink" title="Linux 环境"></a>Linux 环境</h3><ol>
+<li><p>Debian 或 Ubuntu环境下</p>
+<pre><code>/* For Debian or Ubuntu /*  
+$ sudo apt-get install sqlite3 sqlite3-dev
+</code></pre></li>
+<li><p>RedHat, CentOS, or Fedora</p>
+<pre><code>/* For RedHat, CentOS, or Fedora/*  
+$ yum install SQLite3 sqlite3-dev 
+</code></pre></li>
+</ol>
+<h3 id="Mac-OX-环境"><a href="#Mac-OX-环境" class="headerlink" title="Mac OX 环境"></a>Mac OX 环境</h3><p><strong>雪豹或者更新版本系统中已经自带</strong></p>
+<h2 id="开始操作"><a href="#开始操作" class="headerlink" title="开始操作"></a>开始操作</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>sqlite3 test.db
+</code></pre><p><img src="/img/2015-8-3-1.png" alt="创建数据库"></p>
+<h3 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h3><pre><code>sqlite&gt; create table user (id integer primary key, name text, age integer);
+</code></pre><ul>
+<li>表名<strong>user</strong></li>
+<li>三个字段 id, name, age</li>
+<li>id 为 主键</li>
+</ul>
+<blockquote>
+<p>注意：至少创建一个表或视图，否则数据库不能被保存到磁盘中。</p>
+</blockquote>
+<h3 id="往数据表中插入数据"><a href="#往数据表中插入数据" class="headerlink" title="往数据表中插入数据"></a>往数据表中插入数据</h3><pre><code>sqlite&gt; insert into user(id, name, age) values(1, &apos;Micheal&apos;, 20);
+sqlite&gt; insert into user(id, name, age) values(2, &apos;Jenny&apos;, 22);
+sqlite&gt; insert into user(name, age) values(&apos;Bob&apos;, 19);
+sqlite&gt; insert into user(name, age) values(&apos;Kerk&apos;, 20);
+</code></pre><h3 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h3><pre><code>sqlite&gt; select * from user;
+</code></pre><p><img src="/img/2015-8-3-2.png" alt="查询数据"></p>
+<h3 id="设置格式化查询结果"><a href="#设置格式化查询结果" class="headerlink" title="设置格式化查询结果"></a>设置格式化查询结果</h3><pre><code>sqlite&gt; .mode column;  
+sqlite&gt; .header on;  
+sqlite&gt; select * from user; 
+</code></pre><ul>
+<li>.mode column 将设置为列显示模式</li>
+<li>.header 将显示列名。</li>
+</ul>
+<p><img src="/img/2015-8-3-3.png" alt="格式化查询结果"></p>
+<h3 id="修改表结构"><a href="#修改表结构" class="headerlink" title="修改表结构"></a>修改表结构</h3><h4 id="增加列"><a href="#增加列" class="headerlink" title="增加列"></a>增加列</h4><pre><code>sqlite&gt; alter table user add column email text not null default &apos;&apos; collate nocase;
+</code></pre><h4 id="显示表结构"><a href="#显示表结构" class="headerlink" title="显示表结构"></a>显示表结构</h4><pre><code>sqlite&gt; .schema user
+</code></pre><p><img src="/img/2015-8-3-4.png" alt="显示user表结构"></p>
+<h3 id="创建视图"><a href="#创建视图" class="headerlink" title="创建视图"></a>创建视图</h3><pre><code>sqlite&gt; create view nameview as select id,name from user;
+</code></pre><ul>
+<li>取 user 表的 id,name 两列创建视图</li>
+</ul>
+<h3 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h3><pre><code>sqlite&gt; create index test_idx on user(name);
+</code></pre><ul>
+<li>为 user 表的 name 列创建索引</li>
+</ul>
+<h3 id="获取所有表和视图"><a href="#获取所有表和视图" class="headerlink" title="获取所有表和视图"></a>获取所有表和视图</h3><pre><code>sqlite&gt; .tables
+</code></pre><p><img src="/img/2015-8-3-5.png" alt="列出所有表和视图"></p>
+<h3 id="获取指定表的索引列表"><a href="#获取指定表的索引列表" class="headerlink" title="获取指定表的索引列表"></a>获取指定表的索引列表</h3><pre><code>sqlite&gt; .indices user
+</code></pre><p><img src="/img/2015-8-3-6.png" alt="列出 user 表的索引"></p>
+<h3 id="数据库导出"><a href="#数据库导出" class="headerlink" title="数据库导出"></a>数据库导出</h3><pre><code>sqlite&gt; .output test.sql  
+sqlite&gt; .dump  
+sqlite&gt; .output stdout
+</code></pre><blockquote>
+<p><code>.ouput</code> 命令将输出重定向到文件，导出后，将输出重定向回控制台( stdout )</p>
+</blockquote>
+<p><img src="/img/2015-8-3-7.png" alt="test.sql文件内容"></p>
+<h3 id="从-sql-文件导入数据库"><a href="#从-sql-文件导入数据库" class="headerlink" title="从 sql 文件导入数据库"></a>从 sql 文件导入数据库</h3><pre><code>sqlite&gt; .read test.sql 
+</code></pre><h3 id="格式化输出数据到-CSV-格式"><a href="#格式化输出数据到-CSV-格式" class="headerlink" title="格式化输出数据到 CSV 格式"></a>格式化输出数据到 CSV 格式</h3><pre><code>sqlite&gt; .output test.csv 
+sqlite&gt; .separator ,  
+sqlite&gt; select * from test;  
+sqlite&gt; .output stdout 
+</code></pre><p><img src="/img/2015-8-3-8.png" alt="test.csv 文件内容"></p>
+<h3 id="从-CSV-文件导入数据到表中"><a href="#从-CSV-文件导入数据到表中" class="headerlink" title="从 CSV 文件导入数据到表中"></a>从 CSV 文件导入数据到表中</h3><pre><code>sqlite&gt; create table newtable ( id integer primary key, value text );  
+sqlite&gt; .import [filename.csv ] newtable 
+</code></pre><h3 id="备份数据库"><a href="#备份数据库" class="headerlink" title="备份数据库"></a>备份数据库</h3><pre><code>/* usage: sqlite3 [database] .dump &gt; [filename] */  
+sqlite3 test.db .dump &gt; backup.sql
+</code></pre><h3 id="恢复数据库"><a href="#恢复数据库" class="headerlink" title="恢复数据库"></a>恢复数据库</h3><pre><code>/* usage: sqlite3 [database ] &lt; [filename ] */  
+sqlite3 mytable.db &lt; backup.sql 
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/03/一小时掌握sqlite/" data-id="cjf0surbx000v7kn5t0ibu541" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sqlite/">sqlite</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Vim学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/26/Vim学习笔记/" class="article-date">
+  <time datetime="2015-07-26T06:13:32.000Z" itemprop="datePublished">2015-07-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具-教程/">工具 教程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/Vim学习笔记/">Vim学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <p>vim 是从 vi 发展出来的一个文本编辑器，在程序猿中被广泛使用。和Emacs 并列成为类 Unix 系统用户最喜欢的编辑器。</p>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><h3 id="Vim的模式"><a href="#Vim的模式" class="headerlink" title="Vim的模式"></a>Vim的模式</h3><p>Vim 和 vi 一样，仅仅通过键盘来在这些模式之中切换。这就使得 Vim 可以不用进行菜单或者鼠标操作，并且最小化组合键的操作。对文字录入员或者程序员可以大大增强速度和效率。</p>
+<h4 id="Vim具有6种基本模式："><a href="#Vim具有6种基本模式：" class="headerlink" title="Vim具有6种基本模式："></a>Vim具有6种基本模式：</h4><ul>
+<li><p>普通模式(Normal mode)</p>
+<pre><code>在普通模式中，用的编辑器命令，比如移动光标，删除文本等等。这也是Vim启动后的默认模式。这正好和许多新用户期待的操作方式相反（大多数编辑器默认模式为插入模式）。
+
+Vim强大的编辑能来自于其普通模式命令。普通模式命令往往需要一个操作符结尾。例如普通模式命令dd删除当前行，但是第一个&quot;d&quot;的后面可以跟另外的移动命令来代替第二个d，比如用移动到下一行的&quot;j&quot;键就可以删除当前行和下一行。另外还可以指定命令重复次数，2dd（重复dd两次），和dj的效果是一样的。用户学习了各种各样的文本间移动／跳转的命令和其他的普通模式的编辑命令，并且能够灵活组合使用的话，能够比那些没有模式的编辑器更加高效的进行文本编辑。
+
+在普通模式中，有很多方法可以进入插入模式。比较普通的方式是按a（append／追加）键或者i（insert／插入）键。
+</code></pre></li>
+<li><p>插入模式(Insert mode)</p>
+<pre><code>在这个模式中，大多数按键都会向文本缓冲中插入文本。大多数新用户希望文本编辑器编辑过程中一直保持这个模式。
+
+在插入模式中，可以按ESC键回到普通模式。
+</code></pre></li>
+<li><p>可视模式(Visual mode)</p>
+<pre><code>这个模式与普通模式比较相似。但是移动命令会扩大高亮的文本区域。高亮区域可以是字符、行或者是一块文本。当执行一个非移动命令时，命令会被执行到这块高亮的区域上。Vim的&quot;文本对象&quot;也能和移动命令一样用在这个模式中。
+</code></pre></li>
+<li><p>选择模式(Select mode)</p>
+<pre><code>这个模式和无模式编辑器的行为比较相似（Windows标准文本控件的方式）。这个模式中，可以用鼠标或者光标键高亮选择文本，不过输入任何字符的话，Vim会用这个字符替换选择的高亮文本块，并且自动进入插入模式。
+</code></pre></li>
+<li><p>命令行模式(Command line mode)</p>
+<pre><code>在命令行模式中可以输入会被解释成并执行的文本。例如执行命令（:键），搜索（/和?键）或者过滤命令（!键）。在命令执行之后，Vim返回到命令行模式之前的模式，通常是普通模式。
+</code></pre></li>
+<li><p>Ex模式(Ex mode)</p>
+<pre><code>这和命令行模式比较相似，在使用:visual命令离开Ex模式前，可以一次执行多条命令。
+
+这其中我们常用到就是普通模式、插入模式和命令行模式，本课程也只涉及这三个常用模式的内容
+</code></pre></li>
+</ul>
+<h4 id="三种常用模式"><a href="#三种常用模式" class="headerlink" title="三种常用模式"></a>三种常用模式</h4><ol>
+<li>普通模式</li>
+<li>插入模式</li>
+<li><p>命令行模式</p>
+<pre><code>vim 启动时即进入**普通模式**，在__普通模式__中，按 `i`（插入）或 `a`（附加）键都可以进入**插入模式**，普通模式中，按 `:` 进入命令行模式。命令行模式中输入 `wq` 回车后保存并退出 vim。
+</code></pre></li>
+</ol>
+<h3 id="vim的常用操作"><a href="#vim的常用操作" class="headerlink" title="vim的常用操作"></a>vim的常用操作</h3><h4 id="普通模式："><a href="#普通模式：" class="headerlink" title="普通模式："></a>普通模式：</h4><p>光标移动：</p>
+<ul>
+<li><code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> 或使用方向键 可以移动光标。</li>
+<li><code>w</code>, <code>b</code> 分别为移动到 下一个/上一个 单词</li>
+</ul>
+<p>退出：</p>
+<ul>
+<li><code>Shift+zz</code> 保存退出 vim</li>
+</ul>
+<p>删除文本：</p>
+<ul>
+<li><code>x</code> 删除游标所在的字符</li>
+<li><code>X</code> 删除游标所在前一个字符</li>
+<li><code>Delete</code> 同 <code>x</code></li>
+<li><code>dd</code> 删除整行</li>
+<li><code>dw</code> 删除一个单词（不适用中文）</li>
+<li><code>d$</code> 或 <code>D</code> 删除至行尾</li>
+<li><code>d^</code> 删除至行首</li>
+<li><code>dG</code> 删除到文档结尾处</li>
+<li><p><code>d1G</code> 删至文档首部</p>
+<pre><code>除此之外，你还可以在命令之前加上数字，表示一次删除多行，如：
+
+    2dd表示一次删除2行 
+</code></pre></li>
+</ul>
+<h4 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式:"></a>插入模式:</h4><p>命令行模式 进入 插入模式：</p>
+<ul>
+<li><code>i</code> 光标处进行编辑</li>
+<li><code>I</code> 行首插入</li>
+<li><code>A</code> 行末插入</li>
+<li><code>a</code> 光标后编辑</li>
+<li><code>o</code> 光标后插入新行</li>
+<li><code>O</code> 光标前插入新行</li>
+<li><code>cw</code> 替换从光标所在位置后到一个单词结尾的字符</li>
+</ul>
+<h4 id="命令行模式："><a href="#命令行模式：" class="headerlink" title="命令行模式："></a>命令行模式：</h4><p>退出：</p>
+<ul>
+<li><code>w</code> 回车，保存文档</li>
+<li><code>w 文件路径</code> 另存为</li>
+<li><code>saveas 文件路径</code> 另存为</li>
+<li><code>q!</code> 强制退出</li>
+<li><code>q</code> 退出</li>
+<li><code>wq!</code> 强制保存并退出</li>
+<li><code>x</code> 保存并退出</li>
+<li><code>wq</code> 保存并退出</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/26/Vim学习笔记/" data-id="cjf0surbj00087kn5m9fkai1l" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-Java图形界面编程（可拔插外观样式）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/24/Java图形界面编程（可拔插外观样式）/" class="article-date">
+  <time datetime="2015-07-24T14:19:26.000Z" itemprop="datePublished">2015-07-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/24/Java图形界面编程（可拔插外观样式）/">Java图形界面编程（Swing可拔插外观样式）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="Swing可拔插式外观样式"><a href="#Swing可拔插式外观样式" class="headerlink" title="Swing可拔插式外观样式"></a>Swing可拔插式外观样式</h2><p>相比于 AWT ，Swing 具有一个重要的优势—— 允许开发者定制组件的外观样式。而 AWT 则只能使用底层操作系统提供的组件外观样式。</p>
+<p>Swing 的这个特性为美化程序外观样式提供了足够的灵活性。</p>
+<p>该特性被称为 <strong>可拔插式外观样式（pluggable look-and-feel，PLAF）</strong></p>
+<blockquote>
+<p>提示：可以参考QQ的皮肤切换功能。</p>
+</blockquote>
+<p>而且，Swing 默认提供了一些外观样式供开发者使用。其中，<strong>“metal”</strong> 是默认使用的样式，而 <strong>“nimbus”</strong> 是Java7新增的样式。</p>
+<p>除了不同平台上相同的外观样式，不同平台上还有特定的外观样式。</p>
+<p>程序的外观样式由 <em>javax.swing.UIMangager</em> 类管理。<em>UIManager</em> 类可以为程序切换不同的外观样式。</p>
+<h2 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h2><pre><code>import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+/**
+ * PLAF(Pluggable look and feel)
+ * Created by jiawen on 2015/7/24.
+ */
+public class Plaf {
+    public void selectPlaf() {
+        final JFrame frame = new JFrame();
+        //获得系统自带的所有外观样式信息
+        UIManager.LookAndFeelInfo[] lafs = UIManager.getInstalledLookAndFeels();
+        JComboBox combo = new JComboBox(lafs);
+        combo.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                if (e.SELECTED == e.getStateChange()) {
+                    //如果状态改变为选中，则...
+                    UIManager.LookAndFeelInfo info = (UIManager.LookAndFeelInfo) e.getItem();
+                    try {
+                        //设置新的外观样式
+                        UIManager.setLookAndFeel(info.getClassName());
+                        //更新界面
+                        SwingUtilities.updateComponentTreeUI(frame);
+                    } catch (ClassNotFoundException e1) {
+                        e1.printStackTrace();
+                    } catch (InstantiationException e1) {
+                        e1.printStackTrace();
+                    } catch (IllegalAccessException e1) {
+                        e1.printStackTrace();
+                    } catch (UnsupportedLookAndFeelException e1) {
+                        e1.printStackTrace();
+                    }
+                }
+            }
+        });
+        frame.add(combo, BorderLayout.NORTH);
+        frame.add(new JButton(&quot;按钮&quot;), BorderLayout.SOUTH);
+        frame.setTitle(&quot;可拔插外观样式示例&quot;);
+        frame.setSize(600, 300);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
     }
-  });
-});
-</script>
 
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-
-
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe6d1f421bbc9962127a50488f9ed37d1' type='text/javascript'%3E%3C/script%3E"));
-</script>
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+    public static void main(String[] args) {
+        new Plaf().selectPlaf();
     }
+}
+</code></pre><h2 id="运行效果"><a href="#运行效果" class="headerlink" title="运行效果"></a>运行效果</h2><h3 id="外观样式选择下拉框"><a href="#外观样式选择下拉框" class="headerlink" title="外观样式选择下拉框"></a>外观样式选择下拉框</h3><p><img src="/img/2015-7-24-0.png" alt="外观样式选择下拉框"></p>
+<h3 id="默认外观样式"><a href="#默认外观样式" class="headerlink" title="默认外观样式"></a>默认外观样式</h3><p><img src="/img/2015-7-24-1.png" alt="metal外观样式"></p>
+<h3 id="nimbus外观样式"><a href="#nimbus外观样式" class="headerlink" title="nimbus外观样式"></a>nimbus外观样式</h3><p><img src="/img/2015-7-24-2.png" alt="nimbus外观样式"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/24/Java图形界面编程（可拔插外观样式）/" data-id="cjf0surbb00027kn50pd6ajud" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-图形界面编程/">Java 图形界面编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-VPS主机搭建VPN" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/28/VPS主机搭建VPN/" class="article-date">
+  <time datetime="2015-05-28T13:06:45.000Z" itemprop="datePublished">2015-05-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/28/VPS主机搭建VPN/">VPS主机搭建VPN</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>当你拥有一台国外的VPS的时候，你就可以用来搭建VPN，然后就能翻墙了（翻墙你都不知道的话，先去百度下吧）。PS：写完我才发现，一般人还是看不懂的。</p>
+<p><strong>搭建VPN的主要分为两个步骤</strong>：</p>
+<ul>
+<li>安装pptpd，并配置</li>
+<li>安装iptables,配置iptables</li>
+</ul>
+<h2 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h2><h3 id="pptpd"><a href="#pptpd" class="headerlink" title="pptpd:"></a>pptpd:</h3><p>pptp全称（Point to Point Tunneling Protocol），点对点隧道协议。是一种支持多协议虚拟专用网络技术[<a href="http://baike.baidu.com/view/32771.html" target="_blank" rel="noopener">1</a>]。就是利用它来实现的VPN功能。</p>
+<h3 id="iptables"><a href="#iptables" class="headerlink" title="iptables:"></a>iptables:</h3><p>iptables 是linux系统下的应用层防火墙工具。我们用它主要用来控制网络信息的转发，使服务器能够起到代理作用，可以理解为跳板吧。同时，可以用来限制访问。</p>
+<h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>操作系统：Ubuntu14.04 x86</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>远程登陆系统，进入shell,此时一般已经为root用户。<br><img src="/img/2015-5-28-6.png" alt="shell界面"></p>
+<h2 id="pptpd安装与配置"><a href="#pptpd安装与配置" class="headerlink" title="pptpd安装与配置"></a>pptpd安装与配置</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>输入命令</p>
+<pre><code>apt-get install pptpd
+</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>编辑配置文件</p>
+<pre><code>vi /etc/pptpd.conf
+</code></pre><p>找到并修改ip<br>这里假设你的VPS的IP地址为：138.128.193.121</p>
+<pre><code>localip 138.128.193.121
+remoteip 138.128.193.121-254,138.128.193.1
+</code></pre><p>如图<br><img src="/img/2015-5-28-7.png" alt="/etc/pptpd.conf"></p>
+<p><strong>设置DNS</strong></p>
+<p>打开文件</p>
+<pre><code>vi /etc/ppp/pptpd-options
+</code></pre><p>修改DNS为google的DNS</p>
+<pre><code>ms-dns 8.8.8.8
+ms-dns 8.8.4.4
+</code></pre><p>设置账号（此处的账号就是你将来用来登陆VPN的账号）：</p>
+<pre><code>vi /etc/ppp/chap-secrets
+</code></pre><p>添加一行，依次为：用户名，服务，密码，限制IP</p>
+<pre><code>xiongvpn pptpd passwd123 *
+...
+</code></pre><p>星号表示，不限制ip，因为你以后用的时候，自己设备的ip可能有变化，所以这里不设限制。此处可以设置多行，也就是可以设置许多的账户。弄个自动修改的机制的话，就可以在线卖VPN了。</p>
+<p>重启服务：</p>
+<pre><code>/etc/init.d/pptpd restart
+</code></pre><p><strong>设置IP转发:</strong></p>
+<p>打开文件</p>
+<pre><code>vi /ect/sysctl.conf
+</code></pre><p>去掉文件中一行前的注释符号<code>#</code></p>
+<pre><code>net.ipv4.ip_forward=1
+</code></pre><p>使它立刻生效</p>
+<pre><code>sysctl -p
+</code></pre><h2 id="iptables安装与配置"><a href="#iptables安装与配置" class="headerlink" title="iptables安装与配置"></a>iptables安装与配置</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><pre><code>apt-get install iptables
+</code></pre><h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>假设你的VPS的IP地址为：138.128.193.121</p>
+<p>建立一个NAT(Network Address Translation，网络地址转换):</p>
+<pre><code>iptables -t nat -A POSTROUTING -s 138.128.193.0/24 -o eth0 -j MASQUERADE
+</code></pre><p>设置MTU，防止包过大：</p>
+<pre><code>iptables -A FORWARD -s 138.128.193.0/24 -p tcp -m tcp --tcp-flags SYN,RST SYN -j TCPMSS --set-mss 1200
+</code></pre><p>将规则保存，使重启后规则不丢失：</p>
+<pre><code>iptables-save &gt;/etc/iptables-rules
+</code></pre><p>编辑网卡文件，加载网卡时自动加载规则</p>
+<pre><code>vi  /etc/network/interfaces
+</code></pre><p>末尾加入：</p>
+<pre><code>pre-up iptables-restore &lt;/etc/iptables-rules
+</code></pre><p>检查pptp默认1723端口是否监听中：<br>netstat -anlp |grep :1723</p>
+<h3 id="VPN的使用"><a href="#VPN的使用" class="headerlink" title="VPN的使用"></a>VPN的使用</h3><p>可以参考<a href="http://jingyan.baidu.com/article/4f7d5712ac8a611a201927e0.html" target="_blank" rel="noopener">百度经验_浙江大学VPN设置方法-WIN7</a></p>
+<p>主要会用到的信息：</p>
+<ul>
+<li>VPS的IP地址</li>
+<li>之前在<code>chap-secrets</code>文件中添加的用户名与密码。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1] <a href="http://baike.baidu.com/view/32771.html" target="_blank" rel="noopener">百度百科_PPTP</a></p>
+<p>[2] <a href="http://linux.cn/article-3376-1.html" target="_blank" rel="noopener">如何在Ubuntu下配置pptp vpn</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/05/28/VPS主机搭建VPN/" data-id="cjf0surbi00077kn5741p6y19" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具-科学上网/">工具 科学上网</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+    <article id="post-如何搭建一个一年只需4美刀的VPN（搞机篇）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/26/如何搭建一个一年只需4美刀的VPN（搞机篇）/" class="article-date">
+  <time datetime="2015-05-26T12:29:58.000Z" itemprop="datePublished">2015-05-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/26/如何搭建一个一年只需4美刀的VPN（搞机篇）/">如何搭建一个一年只需4美元的VPN</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Table of Contents -->
+        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>今天教大家怎么搭建一个一年只需要4刀的VPN服务器。大家只需照做，就可以建立一个属于自己的VPN服务器，然后通过VPN登录，就可以访问国外的网络，虽然速度有时候不太稳定，但对于查询资料，或是上FB，twitter而言足够。另外，这里搭建的VPN服务器，所有的设备都可以登录使用，无论是电脑还是手机，并且无需安装额外的软件。我的选择的服务器在美国西海岸洛杉矶机房，是四个可选机房中最快的一个，个人使用下来，一般白天比较快，进网页，google什么的很流畅，晚上使用的话就可能会慢的不行。我猜想是因为时差的原因，这边白天刚好网络情况比较好。</p>
+<pre><code>声明：希望大家做一个理性的人，好好利用VPN进行科学上网，不要做违反国家法律法规的事情。
+</code></pre><p>通常，搭建VPN服务器，主要分为以下几个步骤：</p>
+<ol>
+<li>租借一台中国可以访问的国外的VPS</li>
+<li>安装Linux操作系统</li>
+<li>安装pptpd，配置pptpd</li>
+<li>安装iptables，配置iptables</li>
+</ol>
+<h2 id="主要名词解释"><a href="#主要名词解释" class="headerlink" title="主要名词解释"></a>主要名词解释</h2><h3 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h3><p>VPN全称Virtual Private Network，即虚拟专用网络。主要作用是在公用网络上建立专用网络，进行加密通讯。VPN可通过服务器、硬件、软件等多种方式实现[<a href="http://baike.baidu.com/link?url=qvo9sQken7Ro82iiBrqXAa6SCLK1d0uz18SDXI_1EfkeCAp6una6iCdon_yLM-1UUTUoWcRy1w1-4tHcjed84KaauuRk6LK-049BUXzI_7bZJgurZ6REZQQUnXRA8Nus" title="百度百科：VPN" target="_blank" rel="noopener">1</a>]。</p>
+<h3 id="VPS"><a href="#VPS" class="headerlink" title="VPS"></a>VPS</h3><p>VPS全称Virtual Private Server，即虚拟专用服务器。使用虚拟化技术，可以将一台物理服务器划分为多个虚拟服务器[<a href="http://baike.baidu.com/link?url=E-TgaZ143deGuyN_LAoiVfMHnG-kiUyP-g6A3R1P3vqsvtdVIxrPjz1eX0asIuDjdg0E98lS8hgO5UmOZXhN9_" title="百度百科：VPS" target="_blank" rel="noopener">2</a>]。</p>
+<p>通俗的说，就是利用软件对一台服务器的资源（硬盘空间、内存空间、计算能力、网络带宽等）进行分割，划分成多个虚拟的服务器来进行使用。</p>
+<p>类似于房东将一个大房子分隔成多个小房间，然后出租给多个租户。</p>
+<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h3 id="租借国外VPS"><a href="#租借国外VPS" class="headerlink" title="租借国外VPS"></a>租借国外VPS</h3><p>VPS的价格各不相同。厂商不同，所提供的VPS质量各不相同，价格也不相同。相同厂商的VPS的价格，通常与VPS的硬件配置与网络资源（内存大小、硬盘大小、CPU核心数量、带宽大小、流量等）相关。配置越高，拥有的网络资源越多，价格就越高。</p>
+<p>我们搭建VPN服务器所需要的配置并不高，然而市场上的VPS通常为中小企业网站提供，最低的配置对我们而言都过剩了，价格也相对比较贵，通常几美元至几十美元每月。</p>
+<p>我们所要使用的4美元/年的VPS，是<a href="https://bandwagonhost.com/aff.php?aff=3169" target="_blank" rel="noopener">bandwagonhost(搬瓦工)</a>提供的微型VPS。直接上这个厂商的官方网站，你可能找不到我们所需要的名为<code>Micro-64</code>的微型VPS（首页上找不到的O(∩_∩)O）所以我提供一个超链接，方便你找到它[<a href="https://bandwagonhost.com/cart.php" target="_blank" rel="noopener">Micro-64</a>]，位于页面中间位置偏上一点点，或者你直接按<code>Ctrl+F</code>调出浏览器搜索，搜<code>Micro-64</code>直接定位。</p>
+<p>该Micro-64 vps的配置为：</p>
+<ul>
+<li>HDD: 1.5 GB 机械硬盘空间： 1.5GB</li>
+<li>RAM: 64 MB 内存大小： 64MB</li>
+<li>CPU: 1x Intel Xeon</li>
+<li>BW: 100 GB/mo： 流量：100GB/月</li>
+<li>价格： $3.99 USD/年</li>
+</ul>
+<p>虽然看上去配置很低，但对于只需要跑几个软件程序的VPN服务器而言已经足够了。访问国外网站速度的瓶颈关键在于当前网络连接的拥塞情况。这个有时候也是没办法的事情，网络质量高的VPS价格也非常贵，所幸，这个VPS还是挺好用的。当然，也有配置稍微高一点，流量大一点的<code>Micro-96</code>、<code>Micro-128</code>。其实，以我们的网速及使用频率，<code>100GB/月</code>够用了，我用半个多月了，才用了不到<strong>5GB</strong>不到，还是开着更新了好多的软件。</p>
+<pre><code>其实这个VPS就是全文关键啦，用来搭建VPN比较经济实惠，会搭的人就可以散了。
+</code></pre><p><strong>购买步骤</strong>：</p>
+<ol>
+<li><p>官网注册个账号（这里有个比较郁闷的问题是，注册的时候验证码的生成与google有点关系，所以需要翻墙才能显示出来…呵呵）</p>
+</li>
+<li><p>然后再点击之前的那个购物车，找到<code>Micro-64</code>，然后点击<code>Order Now</code>下单。<br><img src="/img/2015-5-28-1.png" alt="Mirco-64"></p>
+</li>
+<li><p>接下来跳转至了<code>Product Configuraton</code>页面，因为默认地点就是洛杉矶，不用修改，直接点<code>Add to Cart</code>按钮。<br><img src="/img/2015-5-28-2.png" alt="Add to Cart"></p>
+</li>
+<li><p>接下来是<code>Order Summary</code>,如果没有别的要买了，就<code>Check out</code>。<br><img src="/img/2015-5-28-3.png" alt="Alt Check out"></p>
+</li>
+<li><p>接下来就是<code>Check out</code>页面啦，也就是确认一下你的具体信息什么的，然后就可以支付了。</p>
+<pre><code>注意：需要用`Paypal`支付，没有的话就去注册个。一开始我以为必须要用信用卡，后来发现普通银联卡也可以绑定。
+</code></pre></li>
+<li><p>付完款后，就完成购买了。</p>
+</li>
+<li><p>回到搬瓦工的网站（如果没登陆的话，点击右上角的<code>Client Area</code>登陆），在导航栏点击<code>Services</code>，打开<code>My Services</code>。结果如图所示，就是你的VPS了。<br><img src="/img/2015-5-28-4.png" alt="VPS列表"><br>点击红框标出的<code>KiwiVM Control Panel</code>，可以进入你的VPS管理面板。<br><img src="/img/2015-5-28-5.png" alt="VPS管理面板"><br>可以看到VPS的当前运行状态，以及流量的使用量。</p>
+</li>
+<li><p>默认的OS(操作系统)应该是CentOS的，但因为本人常用Ubuntu，所以重新安装了Ubuntu系统。因为后面的步骤与系统有一定关联，所以你也可以重新安装一个新系统。点击左侧菜单栏中<code>Install new OS</code>,然后选择<code>Ubuntu-14.04-x86</code>，勾选下面的<code>I agree...</code>，点击<code>Reload</code>,等待数分钟就可以了。安装完成后，应该会有邮件通知，同时会告诉你新的密码。</p>
+</li>
+</ol>
+<p>这样，主机基本准备好了，接下来就是对VPS进行配置了，主要需要Linux命令行的一些知识。</p>
+<p>这里有几点需要注意的信息，下面会有用到：</p>
+<ol>
+<li>VPS的<strong>IP</strong>，在之前的第7步中可以看到。</li>
+<li>VPS的<strong>SSH Port</strong>,即SSH端口号,同上，可以在管理面板的<code>Main controls</code>中看到。</li>
+<li>VPS的<strong>Root密码</strong>，邮箱里会有邮件，或者自己在管理面板的菜单栏选择<code>Root password modification</code>进行修改。</li>
+</ol>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>要配置VPS，就必须远程登陆这台主机。</p>
+<p>你有两种方式可供选择：</p>
+<ol>
+<li><p>使用SSH登陆工具，然后根据之前的IP、端口号、密码信息进行远程登陆。</p>
+</li>
+<li><p>管理面板中，点击左侧菜单栏中的<code>Root shell-interactive</code>，启动一个HTML5的shell界面。<br><img src="/img/2015-5-28-6.png" alt="HTML5 shell交互界面"><br>速度还是有点慢，一卡一卡的。</p>
+</li>
+</ol>
+<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2><p>主机配置见下一篇<a href="/2015/05/28/VPS主机搭建VPN/">《VPS主机搭建VPN》</a>。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>[1] <a href="http://baike.baidu.com/link?url=qvo9sQken7Ro82iiBrqXAa6SCLK1d0uz18SDXI_1EfkeCAp6una6iCdon_yLM-1UUTUoWcRy1w1-4tHcjed84KaauuRk6LK-049BUXzI_7bZJgurZ6REZQQUnXRA8Nus" title="百度百科：VPN" target="_blank" rel="noopener">百度百科：VPN</a></p>
+<p>[2] <a href="http://baike.baidu.com/link?url=E-TgaZ143deGuyN_LAoiVfMHnG-kiUyP-g6A3R1P3vqsvtdVIxrPjz1eX0asIuDjdg0E98lS8hgO5UmOZXhN9_" title="百度百科：VPS" target="_blank" rel="noopener">百度百科：VPS</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/05/26/如何搭建一个一年只需4美刀的VPN（搞机篇）/" data-id="cjf0surc000127kn5gcsohm8r" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具-科学上网/">工具 科学上网</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+ 
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页&raquo;</a>
+  </nav>
+</section>
+           
+    <aside id="sidebar">
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title recent-posts">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/28/程序分析/">程序分析</a>
+          </li>
+        
+          <li>
+            <a href="/2016/12/20/CentOS-设置静态IP/">CentOS 设置静态IP</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/10/Learning-Groovy/">Learning.Groovy</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/06/统计代码行数/">统计代码行数</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/21/log4j-原理/">log4j-原理</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+
+  
+    
+  
+    <!--微信公众号二维码-->
+
+
+  
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-left">
+      &copy; 2014 - 2018 Bearhomeng&nbsp;|&nbsp;
+      主题 <a href="https://github.com/giscafer/hexo-theme-cafe/" target="_blank">Cafe</a>
+    </div>
+     <div id="footer-right">
+      联系方式&nbsp;|&nbsp;youemail@outlook.com
+    </div>
+  </div>
+</footer>
+ <script src="/jquery/jquery.min.js"></script>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    <img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
   });
+}
 </script>
+      
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    });
-</script>
+  
+    <script>
+      var cloudTieConfig = {
+        url: document.location.href, 
+        sourceId: "",
+        productKey: "e2fb4051c49842688ce669e634bc983f",
+        target: "cloud-tie-wrapper"
+      };
+    </script>
+    <script src="https://img1.ws.126.net/f2e/tie/yun/sdk/loader.js"></script>
+    
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
+  
+
+
+
+
+
+
+
+<!-- author:forvoid begin -->
+<!-- author:forvoid begin -->
+
+<!-- author:forvoid end -->
+
+<!-- author:forvoid end -->
+
+
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
-    });
-</script>
+      })
+    </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      })
+    </script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mathjax/MathJax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
 
 
-<!-- MathJax End -->
+ <script src="/js/is.js"></script>
 
-<!-- Tiny_search Begin -->
 
-<!-- Tiny_search End -->
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-  </body>
- </html>
+
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+  </div>
+</body>
+</html>
