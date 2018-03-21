@@ -1,0 +1,732 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>翻译：MiniSAT用户指南 | Bearhomeng 的生活</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Bearhomeng">
+    
+
+    
+    <meta name="description" content="源网页MiniSAT User Guide: How to use the MiniSAT SAT Solver  MiniSat是一个面向研究人员与开发人员所开发的微型、开源的布尔可满足性问题求解器(Boolean satisfiability problem solver)。它发布在 MIT license 下。 一个SAT求解器用于判断一个布尔表达式中的变量是否存在某个赋值能够使得该表达式">
+<meta name="keywords" content="MiniSAT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="翻译：MiniSAT用户指南">
+<meta property="og:url" content="http://yoursite.com/2016/04/03/翻译：MiniSAT用户指南/index.html">
+<meta property="og:site_name" content="Bearhomeng 的生活">
+<meta property="og:description" content="源网页MiniSAT User Guide: How to use the MiniSAT SAT Solver  MiniSat是一个面向研究人员与开发人员所开发的微型、开源的布尔可满足性问题求解器(Boolean satisfiability problem solver)。它发布在 MIT license 下。 一个SAT求解器用于判断一个布尔表达式中的变量是否存在某个赋值能够使得该表达式">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/2016-4-3-1.png">
+<meta property="og:image" content="http://yoursite.com/img/2016-4-3-2.png">
+<meta property="og:image" content="http://yoursite.com/img/2016-4-3-3.png">
+<meta property="og:image" content="http://yoursite.com/img/2016-4-3-4.png">
+<meta property="og:updated_time" content="2016-04-04T14:12:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="翻译：MiniSAT用户指南">
+<meta name="twitter:description" content="源网页MiniSAT User Guide: How to use the MiniSAT SAT Solver  MiniSat是一个面向研究人员与开发人员所开发的微型、开源的布尔可满足性问题求解器(Boolean satisfiability problem solver)。它发布在 MIT license 下。 一个SAT求解器用于判断一个布尔表达式中的变量是否存在某个赋值能够使得该表达式">
+<meta name="twitter:image" content="http://yoursite.com/img/2016-4-3-1.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Bearhomeng 的生活" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Bearhomeng 的生活">Bearhomeng 的生活</a></h1>
+				<h2 class="blog-motto">人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。——《悟空传》</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/04/03/翻译：MiniSAT用户指南/" title="翻译：MiniSAT用户指南" itemprop="url">翻译：MiniSAT用户指南</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bearhomeng" target="_blank" itemprop="author">Bearhomeng</a>
+		
+  <p class="article-time">
+    <time datetime="2016-04-03T01:04:04.000Z" itemprop="datePublished"> 发表于 2016-04-03</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#合取范式-（Conjunctive-Normal-Form）"><span class="toc-number">1.</span> <span class="toc-text">合取范式 （Conjunctive Normal Form）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调用-MiniSAT"><span class="toc-number">2.</span> <span class="toc-text">调用 MiniSAT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MiniSAT-输出格式"><span class="toc-number">3.</span> <span class="toc-text">MiniSAT 输出格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获得更多的解"><span class="toc-number">4.</span> <span class="toc-text">获得更多的解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#译者补充：-MiniSAT-下载-与-编译"><span class="toc-number">5.</span> <span class="toc-text">译者补充： MiniSAT 下载 与 编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#译者补充：MiniSAT-使用"><span class="toc-number">6.</span> <span class="toc-text">译者补充：MiniSAT 使用</span></a></li></ol>
+		
+		</div>
+		
+		<blockquote>
+<p>源网页<a href="http://www.dwheeler.com/essays/minisat-user-guide.html" target="_blank" rel="noopener"><br>MiniSAT User Guide: How to use the MiniSAT SAT Solver</a></p>
+</blockquote>
+<p>MiniSat是一个面向研究人员与开发人员所开发的微型、开源的布尔可满足性问题求解器(<em>Boolean satisfiability problem solver</em>)。它发布在 <em>MIT license</em> 下。</p>
+<p>一个SAT求解器用于判断一个布尔表达式中的变量是否存在某个赋值能够使得该表达式取值为真。在这个表达式中，只能含有<strong>AND</strong>，<strong>OR</strong>，<strong>NOT</strong>，<strong>括号</strong>，以及<strong>布尔变量</strong>。如果可满足，大部分的 <em>SAT</em> 求解器（包括 MiniSAT）都会列出使该表达式为真的赋值。由于许多的问题都可以分解为一个大型的 SAT 问题（可能含有数千个变量），所以 <em>SAT</em> 求解器具有十分广泛的用途。</p>
+<p>本文是一篇简单的 MiniSAT 用户指南。它描述了 MiniSAT 的使用方法，包括 它的输入格式、选项以及输出格式。</p>
+<h2 id="合取范式-（Conjunctive-Normal-Form）"><a href="#合取范式-（Conjunctive-Normal-Form）" class="headerlink" title="合取范式 （Conjunctive Normal Form）"></a>合取范式 （<em>Conjunctive Normal Form</em>）</h2><p>如众多 <em>SAT</em> 求解器一样，<em>MiniSAT</em> 要求的输入为合取范式。合取范式由以下构造块构成：</p>
+<ul>
+<li><p>项（<em>term</em>）：一个项可以是一个布尔变量（比如：  x4），也可以是一个布尔变量的非（NOT x4，在这里可以写成 -x4）。</p>
+</li>
+<li><p>子句（<em>clause</em>）：一个字句是一个或多个项的集合，通过 OR 运算符（在这里记为 <code>|</code>）连接；在一个子句中，相同的变量不会重复出现。</p>
+</li>
+<li><p>表达式（<em>expression</em>）：一个表达式有一个或多个子句组成，通过 AND 运算符（在这里记为 <code>&amp;</code>）进行连接。</p>
+</li>
+</ul>
+<p>一个 <em>CNF</em> 的示例：</p>
+<pre><code>(x1 | x5 | x4) &amp;
+(-x1 | x5 | x3 | x4) &amp;
+(-x3 | x4).
+</code></pre><p>任何布尔表达式都能转化为 <em>CNF</em> ；完成该工作的算法和代码能在别的地方获得。（比如： 可以参考 <em>Russel</em> 和 <em>Norvig</em> 在1995 年撰写的 “ <em>Artificial Intelligence: A modern Approach</em> “）。</p>
+<p><em>MiniSAT</em> 的输入格式</p>
+<p>和大部分的 <em>SAT</em> 求解器一样， <em>MiniSAT</em> 所接受的输入是一种 <strong>DIMACS CNF</strong> 简化格式的文本。每一个以 <em>c</em> 字母开头的行都是注释。第一个非注释行必须是以下形式：</p>
+<pre><code>p cnf NUMBER_OF_VARIABLES NUMBER_OF_CLAUSES
+</code></pre><p>后续的每一个非注释行定义一个子句。每一行都是一个以空格分隔的变量列表；一个正值就是对应的变量 (<strong>4 就是 x4</strong>)，而一个负值就是那个变量的非（<strong>-5 就是 -x5</strong>）。每一行必须以一个空格和数字<br><strong>0</strong> 结尾。</p>
+<p>因此以上的 CNF 表达式可以写成：</p>
+<pre><code>c Here is a comment.
+p cnf 5 3 
+1 -5 4 0 
+-1 5 3 4 0 
+-3 -4 0
+</code></pre><p>“ <em>p cnf</em> ” 这一行意思是这个 <em>CNF</em> 格式的 <em>SAT</em> 问题中，有 <code>5</code> 个变量以及 <code>3</code> 个子句。这一行之后的第一行就是第一个子句，也就是 <em>x1 | -x5 | x4</em>。</p>
+<p>你可以把这看作是一个简单的表达式。或者你也可以把它看作为一个子句集合，而求解器的任务就是找到使所有子句为真的布尔变量赋值集合。</p>
+<p>更多信息可以参考 <a href="http://www.satcompetition.org/2004/format-solvers2004.html" target="_blank" rel="noopener">SAT 2004 competition</a></p>
+<h2 id="调用-MiniSAT"><a href="#调用-MiniSAT" class="headerlink" title="调用 MiniSAT"></a>调用 MiniSAT</h2><p>MiniSAT 的用法如下：</p>
+<pre><code>minisat [options] [INPUT-FILE [RESULT-OUTPUT-FILE]]
+</code></pre><p><em>INPUT-FILE</em> 的格式为上述的 <em>DIMACS CNF</em> 格式，也可以是纯文本 或 <em>gizp</em> 压缩过的文件。你可以使用 <em>-h</em> 或者 <em>–help</em> 来查看其它的选项。</p>
+<p>程序的选项包括：</p>
+<pre><code>-pre = {none,once} [Turn on preprocessor]
+  -asymm
+  -rcheck
+  -grow = NUM [ must be greater than 0 ]
+  -polarity-mode = {true,false,rnd}
+  -decay = NUM [ 0 - 1 ]
+  -rnd-freq = NUM [ 0 - 1 ]
+  -dimacs = OUTPUT-FILE
+  -verbosity = {0,1,2}
+</code></pre><p>带值的选项必须在中间加上 <strong>=</strong>，然后再是它的值，比如：</p>
+<pre><code>minisat -pre=once
+</code></pre><p>在许多问题中，使用预处理器是一个不错的想法（<em>-pre=once</em>）。</p>
+<h2 id="MiniSAT-输出格式"><a href="#MiniSAT-输出格式" class="headerlink" title="MiniSAT 输出格式"></a><em>MiniSAT</em> 输出格式</h2><p>当运行的时候，<em>MiniSAT</em> 向标准错误流发送一些执行的不同统计信息。根据表达式是否可满足，它会向标准输出流输出 <em>SATISFIABLE</em> 或者 <em>UNSATIFIABLE</em> （不包括引号）。</p>
+<p>如果你指定了一个 <em>RESULT-OUTPUT-FILE</em>（结果输出文件），<em>MiniSAT</em> 会往这个文件中写入文本。如果可满足，第一行就会是 <em>SAT</em>，如果不可满足，第一行就会是 <em>UNSAT</em> 。如果是 <em>SAT</em>，第二行就会是满足表达式的布尔变量赋值集合。（尽管还有其他的，它只产生一个赋值）。</p>
+<p>因此对于以上的例子，它会在输出文件中生成：</p>
+<pre><code>SAT
+1 2 -3 4 5 0
+</code></pre><p>这意味着它是可满足的，在 x1=t, x2=t, x3=f, x4=t, 以及 x5=t 情况下（其中 t 是 true，f 是 false）。回到我们最初的例子，我们可以看到这确实是一个解：</p>
+<pre><code>(x1 | -x5 | x4) = t | -t | t = t
+  (-x1 | x5 | x3 | x4) = -t | t | f | t = t
+  (-x3 | x4) = -f | t = t
+</code></pre><h2 id="获得更多的解"><a href="#获得更多的解" class="headerlink" title="获得更多的解"></a>获得更多的解</h2><p>如果你想要获得另一个解，“<strong>明显</strong>”的方式是将前一个解取非，作为一个新的子句添加到表达式中。比如，在我们的示例中，我们可以用</p>
+<pre><code>1 2 -3 4 5 0
+</code></pre><p>来产生一个新的输入（<strong>注意：子句的数量增加了！</strong>）：</p>
+<pre><code>p cnf 5 4
+  1 -5 4 0
+  -1 5 3 4 0
+  -3 -4 0
+  -1 -2 3 -4 -5 0
+</code></pre><p>如果我们把这个放入文件 <em>second.in</em> 中，然后运行:</p>
+<pre><code>minisat second.in second.out
+</code></pre><p>我们可以得到一个新的解，以下是 <em>second.out</em> 内容：</p>
+<pre><code>SAT
+1 -2 -3 4 5 0
+</code></pre><p>即： x1=t, x2=f, x3=f, x4=t, 以及 x5=t。这是和前一个不一样的解，因为 <em>x2=f</em> 而不是 <em>x2=t</em>。我们可以验证一下（和上一次一样，因为 <em>x2</em> 不在任何一个子句中）：</p>
+<pre><code>(x1 | -x5 | x4) = t | -t | t = t
+(-x1 | x5 | x3 | x4) = -t | t | f | t = t
+(-x3 | x4) = -f | t = t
+</code></pre><h2 id="译者补充：-MiniSAT-下载-与-编译"><a href="#译者补充：-MiniSAT-下载-与-编译" class="headerlink" title="译者补充： MiniSAT 下载 与 编译"></a>译者补充： <em>MiniSAT</em> 下载 与 编译</h2><p>以下操作均在 <em>Ubuntu</em> 终端环境下执行：</p>
+<ol>
+<li><p>下载 minisat 源代码</p>
+<pre><code>wget http://minisat.se/downloads/minisat-2.2.0.tar.gz
+</code></pre></li>
+<li><p>解压缩</p>
+<pre><code>tar -xzf minisat-2.2.0.tar.gz
+</code></pre></li>
+<li><p>阅读 REDME 文件，查看相关信息</p>
+<pre><code>more README
+</code></pre></li>
+</ol>
+<p>内容如图：<br><img src="/img/2016-4-3-1.png" alt="README"></p>
+<p>内容描述了 <em>minisat</em> 的构建过程以及使用示例。</p>
+<ol>
+<li><p>构建 <em>minisat</em></p>
+<pre><code>export MROOT= ~/minisat  #设置系统环境变量
+cd core #由于只需要核心功能，转到 core 目录
+make rs    #使用 make 进行编译
+cp minisat_static ~/minisat/minisat #将生成的minisat_static 可执行文件复制到 `~/minisat` 目录下。
+</code></pre></li>
+</ol>
+<h2 id="译者补充：MiniSAT-使用"><a href="#译者补充：MiniSAT-使用" class="headerlink" title="译者补充：MiniSAT 使用"></a>译者补充：<em>MiniSAT</em> 使用</h2><p>以下操作在之前编译的基础之上：</p>
+<ol>
+<li><p>创建输入文件，内容如下：</p>
+<p> <img src="/img/2016-4-3-2.png" alt="example/test1"></p>
+</li>
+<li><p>执行命令</p>
+<p> <img src="/img/2016-4-3-3.png" alt="执行求解"></p>
+</li>
+<li><p>查看输出文件，内容如下：</p>
+<p> <img src="/img/2016-4-3-4.png" alt="example/test1_r"></p>
+</li>
+</ol>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/MiniSAT/">MiniSAT</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/04/03/翻译：MiniSAT用户指南/" data-title="翻译：MiniSAT用户指南 | Bearhomeng 的生活" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/05/10/个人简历/" title="个人简历">
+  <strong>上一篇：</strong><br/>
+  <span>
+  个人简历</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/03/16/武术之于我/"  title="武术之于我">
+ <strong>下一篇：</strong><br/> 
+ <span>武术之于我
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#合取范式-（Conjunctive-Normal-Form）"><span class="toc-number">1.</span> <span class="toc-text">合取范式 （Conjunctive Normal Form）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调用-MiniSAT"><span class="toc-number">2.</span> <span class="toc-text">调用 MiniSAT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MiniSAT-输出格式"><span class="toc-number">3.</span> <span class="toc-text">MiniSAT 输出格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#获得更多的解"><span class="toc-number">4.</span> <span class="toc-text">获得更多的解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#译者补充：-MiniSAT-下载-与-编译"><span class="toc-number">5.</span> <span class="toc-text">译者补充： MiniSAT 下载 与 编译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#译者补充：MiniSAT-使用"><span class="toc-number">6.</span> <span class="toc-text">译者补充：MiniSAT 使用</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Java/" title="Java">Java<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具/" title="工具">工具<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具-教程/" title="工具 教程">工具 教程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建筑学/" title="建筑学">建筑学<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/感悟/" title="感悟">感悟<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/技巧/" title="技巧">技巧<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/数据库/" title="数据库">数据库<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/机器学习/" title="机器学习">机器学习<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/概率统计/" title="概率统计">概率统计<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/程序分析/" title="程序分析">程序分析<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/计算机科学理论/" title="计算机科学理论">计算机科学理论<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/工具-科学上网/" title="工具 科学上网">工具 科学上网<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/linux-服务器管理/" title="linux 服务器管理">linux 服务器管理<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java-图形界面编程/" title="Java 图形界面编程">Java 图形界面编程<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/代码模板/" title="代码模板">代码模板<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/并行计算-GPU/" title="并行计算 GPU">并行计算 GPU<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sqlite/" title="sqlite">sqlite<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/简历/" title="简历">简历<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/学术论文/" title="学术论文">学术论文<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/建筑学-艺术-建筑史/" title="建筑学 艺术 建筑史">建筑学 艺术 建筑史<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/机器学习-machine-learning/" title="机器学习 machine learning">机器学习 machine learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/感悟/" title="感悟">感悟<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/技术/" title="技术">技术<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/实用命令/" title="实用命令">实用命令<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MiniSAT/" title="MiniSAT">MiniSAT<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wulijun.github.io/php-the-right-way/" target="_blank" title="PHP之道">PHP之道</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Gavin in ECNU. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:xiong.jia.wen@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		
+		<a href="/about" target="_blank" title="Bearhomeng">Bearhomeng</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe6d1f421bbc9962127a50488f9ed37d1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

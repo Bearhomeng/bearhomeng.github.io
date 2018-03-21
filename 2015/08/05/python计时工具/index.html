@@ -1,0 +1,699 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>python计时工具:timeit | Bearhomeng 的生活</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Bearhomeng">
+    
+
+    
+    <meta name="description" content="有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。 常规方法通常我们会这么做：  将程序代码封装在一个函数中，然后再主函数中调用它 在函数调用前打一个时间戳 t1 在函数调用后打一个时间戳 t2 最后，计算两个时间戳的差值 t2 - t1 输出时间差  利用time模块（不推荐）。time.localtime(),  time.ti">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python计时工具:timeit">
+<meta property="og:url" content="http://yoursite.com/2015/08/05/python计时工具/index.html">
+<meta property="og:site_name" content="Bearhomeng 的生活">
+<meta property="og:description" content="有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。 常规方法通常我们会这么做：  将程序代码封装在一个函数中，然后再主函数中调用它 在函数调用前打一个时间戳 t1 在函数调用后打一个时间戳 t2 最后，计算两个时间戳的差值 t2 - t1 输出时间差  利用time模块（不推荐）。time.localtime(),  time.ti">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2015-08-05T13:46:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python计时工具:timeit">
+<meta name="twitter:description" content="有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。 常规方法通常我们会这么做：  将程序代码封装在一个函数中，然后再主函数中调用它 在函数调用前打一个时间戳 t1 在函数调用后打一个时间戳 t2 最后，计算两个时间戳的差值 t2 - t1 输出时间差  利用time模块（不推荐）。time.localtime(),  time.ti">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Bearhomeng 的生活" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Bearhomeng 的生活">Bearhomeng 的生活</a></h1>
+				<h2 class="blog-motto">人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。——《悟空传》</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/05/python计时工具/" title="python计时工具:timeit" itemprop="url">python计时工具:timeit</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bearhomeng" target="_blank" itemprop="author">Bearhomeng</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-05T13:23:13.000Z" itemprop="datePublished"> 发表于 2015-08-05</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常规方法"><span class="toc-number">1.</span> <span class="toc-text">常规方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用time模块（不推荐）。"><span class="toc-number">1.1.</span> <span class="toc-text">利用time模块（不推荐）。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#time-localtime-time-time-time-clock-对比："><span class="toc-number">1.1.1.</span> <span class="toc-text">time.localtime(),  time.time(),  time.clock() 对比：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例"><span class="toc-number">1.1.2.</span> <span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#执行结果为"><span class="toc-number">1.1.3.</span> <span class="toc-text">执行结果为</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#timeit模块"><span class="toc-number">2.</span> <span class="toc-text">timeit模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Timer"><span class="toc-number">2.1.</span> <span class="toc-text">Timer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结果如下"><span class="toc-number">2.1.2.</span> <span class="toc-text">结果如下</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<p>有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。</p>
+<h2 id="常规方法"><a href="#常规方法" class="headerlink" title="常规方法"></a>常规方法</h2><p>通常我们会这么做：</p>
+<ol>
+<li>将程序代码封装在一个函数中，然后再主函数中调用它</li>
+<li>在函数调用前打一个时间戳 t1</li>
+<li>在函数调用后打一个时间戳 t2</li>
+<li>最后，计算两个时间戳的差值 t2 - t1</li>
+<li>输出时间差</li>
+</ol>
+<h3 id="利用time模块（不推荐）。"><a href="#利用time模块（不推荐）。" class="headerlink" title="利用time模块（不推荐）。"></a>利用time模块（不推荐）。</h3><h4 id="time-localtime-time-time-time-clock-对比："><a href="#time-localtime-time-time-time-clock-对比：" class="headerlink" title="time.localtime(),  time.time(),  time.clock() 对比："></a>time.localtime(),  time.time(),  time.clock() 对比：</h4><ul>
+<li><p>time.localtime()，localtime返回的是struct_time，包含年月日，显然没有必要，更重要的是localtime()的精度依赖于time()</p>
+</li>
+<li><p>time.time()，time返回的是UTC时间（seconds since the 00:00:00 UTC on January 1）。在很多系统，包括windows下精度很差，win32下的精度只有1/18.2秒。不过在Unix/Linux系统下，time()的精度还是很高的。</p>
+</li>
+<li><p>Python的标准库手册推荐在任何系统下都尽量使用time.clock()。不过要注意是在win32系统下，这个函数返回的是真实时间（wall time），而在Unix/Linux下返回的是CPU时间。在win32下，这个函数的时间分辨率好于1微秒。</p>
+</li>
+</ul>
+<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre><code># -*- coding: utf-8 -*-
+#!/bin/env python
+def test():
+    L=[]
+    for i in range(100):
+        L.append(i)
+if __name__==&apos;__main__&apos;:
+    from time import clock
+    start=clock()
+    for i in range(10000):
+        test()
+    finish=clock()
+    print (finish-start)/10000
+</code></pre><h4 id="执行结果为"><a href="#执行结果为" class="headerlink" title="执行结果为"></a>执行结果为</h4><pre><code>0.00032365431221
+</code></pre><p>这样倒是没什么问题，但有时候就比较麻烦，比如想要测试多次，就需要再套一层循环。</p>
+<p>而在 <code>python</code> 中，提供了一个名为 <code>timeit</code> 的计时工具。</p>
+<h2 id="timeit模块"><a href="#timeit模块" class="headerlink" title="timeit模块"></a>timeit模块</h2><h3 id="Timer"><a href="#Timer" class="headerlink" title="Timer"></a>Timer</h3><p><code>timeit</code> 模块定义了一个 <code>Timer类</code>。该类接收两个参数。</p>
+<ul>
+<li>第一个参数，是你要计时的语句和函数；</li>
+<li>第二个参数，是为第一个参数语句构建环境的导入语句</li>
+</ul>
+<p>创建 <code>Timer</code> 类后，即可调用 <code>timeit</code> 方法进行计时。</p>
+<ul>
+<li>接受一个参数作为被计时语句的调用次数，默认为一百万次</li>
+<li>返回所耗费的秒数</li>
+</ul>
+<p>另一个可以调用的方法为 <code>repeat</code> 。</p>
+<ul>
+<li>接收两个参数。第一个参数为整个测试试验的次数，第二个参数为测试的次数。</li>
+<li>返回每次试验的结果</li>
+</ul>
+<h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><pre><code># -*- coding: utf-8 -*-
+#!/bin/env python
+def test1():
+    n=0
+    for i in range(101):
+        n+=i
+    return n
+def test2():
+    return sum(range(101))
+def test3():
+    return sum(x for x in range(101))
+if __name__==&apos;__main__&apos;:
+    from timeit import Timer
+    t1=Timer(&quot;test1()&quot;,&quot;from __main__ import test1&quot;)
+    t2=Timer(&quot;test2()&quot;,&quot;from __main__ import test2&quot;)
+    t3=Timer(&quot;test3()&quot;,&quot;from __main__ import test3&quot;)
+    print t1.timeit(10000)
+    print t2.timeit(10000)
+    print t3.timeit(10000)
+    print t1.repeat(3,10000)
+    print t2.repeat(3,10000)
+    print t3.repeat(3,10000)
+</code></pre><h4 id="结果如下"><a href="#结果如下" class="headerlink" title="结果如下"></a>结果如下</h4><pre><code>3.21831489756
+0.109082858296
+4.83077821343
+[3.2328774327463403, 3.200496361967792, 3.219513164382626]
+[0.11024445844373787, 0.10911708052280389, 0.10891761383080834]
+[4.817947811802895, 4.892466221265554, 5.003930946530911]
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/技巧/">技巧</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/python/">python</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/08/05/python计时工具/" data-title="python计时工具:timeit | Bearhomeng 的生活" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/08/07/mysql常用命令/" title="mysql常用命令">
+  <strong>上一篇：</strong><br/>
+  <span>
+  mysql常用命令</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/08/03/一小时掌握sqlite/"  title="一小时掌握sqlite">
+ <strong>下一篇：</strong><br/> 
+ <span>一小时掌握sqlite
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常规方法"><span class="toc-number">1.</span> <span class="toc-text">常规方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#利用time模块（不推荐）。"><span class="toc-number">1.1.</span> <span class="toc-text">利用time模块（不推荐）。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#time-localtime-time-time-time-clock-对比："><span class="toc-number">1.1.1.</span> <span class="toc-text">time.localtime(),  time.time(),  time.clock() 对比：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例"><span class="toc-number">1.1.2.</span> <span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#执行结果为"><span class="toc-number">1.1.3.</span> <span class="toc-text">执行结果为</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#timeit模块"><span class="toc-number">2.</span> <span class="toc-text">timeit模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Timer"><span class="toc-number">2.1.</span> <span class="toc-text">Timer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码示例-1"><span class="toc-number">2.1.1.</span> <span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#结果如下"><span class="toc-number">2.1.2.</span> <span class="toc-text">结果如下</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Java/" title="Java">Java<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具/" title="工具">工具<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具-教程/" title="工具 教程">工具 教程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建筑学/" title="建筑学">建筑学<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/感悟/" title="感悟">感悟<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/技巧/" title="技巧">技巧<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/数据库/" title="数据库">数据库<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/机器学习/" title="机器学习">机器学习<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/概率统计/" title="概率统计">概率统计<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/程序分析/" title="程序分析">程序分析<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/计算机科学理论/" title="计算机科学理论">计算机科学理论<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/工具-科学上网/" title="工具 科学上网">工具 科学上网<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/linux-服务器管理/" title="linux 服务器管理">linux 服务器管理<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java-图形界面编程/" title="Java 图形界面编程">Java 图形界面编程<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/代码模板/" title="代码模板">代码模板<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/并行计算-GPU/" title="并行计算 GPU">并行计算 GPU<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sqlite/" title="sqlite">sqlite<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/简历/" title="简历">简历<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/学术论文/" title="学术论文">学术论文<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/建筑学-艺术-建筑史/" title="建筑学 艺术 建筑史">建筑学 艺术 建筑史<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/机器学习-machine-learning/" title="机器学习 machine learning">机器学习 machine learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/感悟/" title="感悟">感悟<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/技术/" title="技术">技术<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/实用命令/" title="实用命令">实用命令<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MiniSAT/" title="MiniSAT">MiniSAT<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wulijun.github.io/php-the-right-way/" target="_blank" title="PHP之道">PHP之道</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Gavin in ECNU. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:xiong.jia.wen@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		
+		<a href="/about" target="_blank" title="Bearhomeng">Bearhomeng</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe6d1f421bbc9962127a50488f9ed37d1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

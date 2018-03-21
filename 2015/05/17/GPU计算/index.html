@@ -1,0 +1,639 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>GPU计算 | Bearhomeng 的生活</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Bearhomeng">
+    
+
+    
+    <meta name="description" content="GPU计算GPU计算，或称显卡计算，是指用计算机的图形处理器（Graphic Processing Unit，简称GPU）处理计算工作的计算方式。与之对应的是使用计算机处理器的（即Central Processing Unit，简称CPU）CPU计算。 与CPU计算相比GPU在科学计算方面拥有如下的优势：  GPU由大量的运算单元（核心）组成，并行计算能力远高于CPU。 通常GPU拥有较普通内存位">
+<meta name="keywords" content="并行计算 GPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GPU计算">
+<meta property="og:url" content="http://yoursite.com/2015/05/17/GPU计算/index.html">
+<meta property="og:site_name" content="Bearhomeng 的生活">
+<meta property="og:description" content="GPU计算GPU计算，或称显卡计算，是指用计算机的图形处理器（Graphic Processing Unit，简称GPU）处理计算工作的计算方式。与之对应的是使用计算机处理器的（即Central Processing Unit，简称CPU）CPU计算。 与CPU计算相比GPU在科学计算方面拥有如下的优势：  GPU由大量的运算单元（核心）组成，并行计算能力远高于CPU。 通常GPU拥有较普通内存位">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2015-05-16T23:49:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GPU计算">
+<meta name="twitter:description" content="GPU计算GPU计算，或称显卡计算，是指用计算机的图形处理器（Graphic Processing Unit，简称GPU）处理计算工作的计算方式。与之对应的是使用计算机处理器的（即Central Processing Unit，简称CPU）CPU计算。 与CPU计算相比GPU在科学计算方面拥有如下的优势：  GPU由大量的运算单元（核心）组成，并行计算能力远高于CPU。 通常GPU拥有较普通内存位">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Bearhomeng 的生活" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Bearhomeng 的生活">Bearhomeng 的生活</a></h1>
+				<h2 class="blog-motto">人生最有价值的时刻，不是最后的功成名就，而是对未来正充满期待与不安之时。——《悟空传》</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/categories">分类</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/tags">标签</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/05/17/GPU计算/" title="GPU计算" itemprop="url">GPU计算</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bearhomeng" target="_blank" itemprop="author">Bearhomeng</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-16T23:30:35.000Z" itemprop="datePublished"> 发表于 2015-05-17</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU计算"><span class="toc-number">1.</span> <span class="toc-text">GPU计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#与CPU计算相比"><span class="toc-number">1.1.</span> <span class="toc-text">与CPU计算相比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统需求"><span class="toc-number">1.2.</span> <span class="toc-text">系统需求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#硬件需求"><span class="toc-number">1.2.1.</span> <span class="toc-text">硬件需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件需求"><span class="toc-number">1.2.2.</span> <span class="toc-text">软件需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.3.</span> <span class="toc-text">注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#权限问题"><span class="toc-number">1.3.1.</span> <span class="toc-text">权限问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#资源占用"><span class="toc-number">1.3.2.</span> <span class="toc-text">资源占用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能考量"><span class="toc-number">1.3.3.</span> <span class="toc-text">性能考量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.4.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="GPU计算"><a href="#GPU计算" class="headerlink" title="GPU计算"></a>GPU计算</h1><p>GPU计算，或称显卡计算，是指用计算机的图形处理器（Graphic Processing Unit，简称GPU）处理计算工作的计算方式。与之对应的是使用计算机处理器的（即Central Processing Unit，简称CPU）CPU计算。</p>
+<h2 id="与CPU计算相比"><a href="#与CPU计算相比" class="headerlink" title="与CPU计算相比"></a>与CPU计算相比</h2><p>GPU在科学计算方面拥有如下的优势：</p>
+<ul>
+<li>GPU由大量的运算单元（核心）组成，并行计算能力远高于CPU。</li>
+<li>通常GPU拥有较普通内存位宽更大、频率更高的专用内存，即显存，适合处理大规模数据。</li>
+</ul>
+<p>综上，CPU适合进行大量同类型数据的密集运算，如密码破译。</p>
+<p>对于适合GPU处理的任务，CPU计算会比CPU计算快2-10倍之多。同时，在分布式计算项目中，GPU计算的得分效率也往往比CPU任务高出很多。</p>
+<h2 id="系统需求"><a href="#系统需求" class="headerlink" title="系统需求"></a>系统需求</h2><h3 id="硬件需求"><a href="#硬件需求" class="headerlink" title="硬件需求"></a>硬件需求</h3><pre><code>显卡需要CUDA或OpenCL支持，可以使用GPU-Z查看显卡是否具备此功能。
+</code></pre><h3 id="软件需求"><a href="#软件需求" class="headerlink" title="软件需求"></a>软件需求</h3><pre><code>新版本的Windows XP ATI/AMD显卡驱动不再兼容OpenCL计算，请考虑升级到Windows7或者使用旧版本（可能效率略低）。
+</code></pre><ul>
+<li>安装相应支持GPU计算的驱动程序</li>
+<li>使用项目方提供的GPU计算专用的客户端/优化计算程序</li>
+<li>计算机程序有权限访问GPU资源</li>
+</ul>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><h3 id="权限问题"><a href="#权限问题" class="headerlink" title="权限问题"></a>权限问题</h3><p>Windows 下，由于权限控制机制，以独立用户身份运行的 BOINC 无法正常检测 GPU。安装 BOINC 客户端时，请不要选择 “Protected access execution mode”（默认即不选）。</p>
+<p>Linux 下，需要将运行客户端的用户加入适当的用户组（通常是 video），以保证客户端拥有足够的权限使用 GPU 资源。</p>
+<h3 id="资源占用"><a href="#资源占用" class="headerlink" title="资源占用"></a>资源占用</h3><p>GPU 计算可能导致计算机图形界面响应非常缓慢。越是低端的显卡，这种效应越发明显。</p>
+<p>对于多显卡用户，可以禁用负责显示的显卡（通常是集成显卡或核心显卡），以避免影响系统正常使用。</p>
+<h3 id="性能考量"><a href="#性能考量" class="headerlink" title="性能考量"></a>性能考量</h3><p>GPU计算一般需要一些CPU资源进行命令。为了最大化GPU的利用程度，你可以手动提高GPU计算进程优先级以使其获得充足的CPU资源，也可以干脆留出一个CPU线程。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.equn.com/wiki/GPU_%E8%AE%A1%E7%AE%97" target="_blank" rel="noopener">GPU计算</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/并行计算-GPU/">并行计算 GPU</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/05/17/GPU计算/" data-title="GPU计算 | Bearhomeng 的生活" data-tsina="" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/05/17/机器学习资源汇总/" title="机器学习资源汇总">
+  <strong>上一篇：</strong><br/>
+  <span>
+  机器学习资源汇总</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/05/16/建筑史观-建筑ABC/"  title="建筑史观-建筑ABC">
+ <strong>下一篇：</strong><br/> 
+ <span>建筑史观-建筑ABC
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU计算"><span class="toc-number">1.</span> <span class="toc-text">GPU计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#与CPU计算相比"><span class="toc-number">1.1.</span> <span class="toc-text">与CPU计算相比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统需求"><span class="toc-number">1.2.</span> <span class="toc-text">系统需求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#硬件需求"><span class="toc-number">1.2.1.</span> <span class="toc-text">硬件需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件需求"><span class="toc-number">1.2.2.</span> <span class="toc-text">软件需求</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.3.</span> <span class="toc-text">注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#权限问题"><span class="toc-number">1.3.1.</span> <span class="toc-text">权限问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#资源占用"><span class="toc-number">1.3.2.</span> <span class="toc-text">资源占用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#性能考量"><span class="toc-number">1.3.3.</span> <span class="toc-text">性能考量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">1.4.</span> <span class="toc-text">参考</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Java/" title="Java">Java<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具/" title="工具">工具<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/工具-教程/" title="工具 教程">工具 教程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/建筑学/" title="建筑学">建筑学<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/感悟/" title="感悟">感悟<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/技巧/" title="技巧">技巧<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/教程/" title="教程">教程<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/数据库/" title="数据库">数据库<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/机器学习/" title="机器学习">机器学习<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/概率统计/" title="概率统计">概率统计<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/程序分析/" title="程序分析">程序分析<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/计算机科学理论/" title="计算机科学理论">计算机科学理论<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/工具-科学上网/" title="工具 科学上网">工具 科学上网<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/java/" title="java">java<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/linux-服务器管理/" title="linux 服务器管理">linux 服务器管理<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Java-图形界面编程/" title="Java 图形界面编程">Java 图形界面编程<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/代码模板/" title="代码模板">代码模板<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mysql/" title="mysql">mysql<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/并行计算-GPU/" title="并行计算 GPU">并行计算 GPU<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/sqlite/" title="sqlite">sqlite<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/简历/" title="简历">简历<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/学术论文/" title="学术论文">学术论文<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/建筑学-艺术-建筑史/" title="建筑学 艺术 建筑史">建筑学 艺术 建筑史<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/机器学习-machine-learning/" title="机器学习 machine learning">机器学习 machine learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/感悟/" title="感悟">感悟<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/技术/" title="技术">技术<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/实用命令/" title="实用命令">实用命令<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MiniSAT/" title="MiniSAT">MiniSAT<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wulijun.github.io/php-the-right-way/" target="_blank" title="PHP之道">PHP之道</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Gavin in ECNU. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:xiong.jia.wen@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2018 
+		
+		<a href="/about" target="_blank" title="Bearhomeng">Bearhomeng</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe6d1f421bbc9962127a50488f9ed37d1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
