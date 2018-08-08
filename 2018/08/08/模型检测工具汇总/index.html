@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="工具,模型检测,形式化验证," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。 常规方法通常我们会这么做：  将程序代码封装在一个函数中，然后再主函数中调用它 在函数调用前打一个时间戳 t1 在函数调用后打一个时间戳 t2 最后，计算两个时间戳的差值 t2 - t1 输出时间差  利用time模块（不推荐）。time.localtime(),  time.ti">
-<meta name="keywords" content="python">
+<meta name="description" content="参考 模型检测工具汇总 面向形式化规格语言的模型检测工具SMV(Symbolic Model Verifier) 符号模型检测工具   SMV用以检测一个有限状态系统是否满足CTL公式。 它的建模方式是以模块为单位，模块可以同步或异步组合，模块描述的基本要素包括非确定性选择，状态转换和并行赋值语句。 其模型检测的基本方法是以二叉图表示状态转换关系，以计算不动点的方法检测状态的可达性和其所满足的性质">
+<meta name="keywords" content="工具,模型检测,形式化验证">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python计时工具:timeit">
-<meta property="og:url" content="https://bearhomeng.github.io/2015/08/05/python计时工具/index.html">
+<meta property="og:title" content="模型检测工具汇总">
+<meta property="og:url" content="https://bearhomeng.github.io/2018/08/08/模型检测工具汇总/index.html">
 <meta property="og:site_name" content="风清望月明">
-<meta property="og:description" content="有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。 常规方法通常我们会这么做：  将程序代码封装在一个函数中，然后再主函数中调用它 在函数调用前打一个时间戳 t1 在函数调用后打一个时间戳 t2 最后，计算两个时间戳的差值 t2 - t1 输出时间差  利用time模块（不推荐）。time.localtime(),  time.ti">
+<meta property="og:description" content="参考 模型检测工具汇总 面向形式化规格语言的模型检测工具SMV(Symbolic Model Verifier) 符号模型检测工具   SMV用以检测一个有限状态系统是否满足CTL公式。 它的建模方式是以模块为单位，模块可以同步或异步组合，模块描述的基本要素包括非确定性选择，状态转换和并行赋值语句。 其模型检测的基本方法是以二叉图表示状态转换关系，以计算不动点的方法检测状态的可达性和其所满足的性质">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2015-08-05T13:46:20.000Z">
+<meta property="og:updated_time" content="2018-08-08T06:32:55.588Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python计时工具:timeit">
-<meta name="twitter:description" content="有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。 常规方法通常我们会这么做：  将程序代码封装在一个函数中，然后再主函数中调用它 在函数调用前打一个时间戳 t1 在函数调用后打一个时间戳 t2 最后，计算两个时间戳的差值 t2 - t1 输出时间差  利用time模块（不推荐）。time.localtime(),  time.ti">
+<meta name="twitter:title" content="模型检测工具汇总">
+<meta name="twitter:description" content="参考 模型检测工具汇总 面向形式化规格语言的模型检测工具SMV(Symbolic Model Verifier) 符号模型检测工具   SMV用以检测一个有限状态系统是否满足CTL公式。 它的建模方式是以模块为单位，模块可以同步或异步组合，模块描述的基本要素包括非确定性选择，状态转换和并行赋值语句。 其模型检测的基本方法是以二叉图表示状态转换关系，以计算不动点的方法检测状态的可达性和其所满足的性质">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://bearhomeng.github.io/2015/08/05/python计时工具/"/>
+  <link rel="canonical" href="https://bearhomeng.github.io/2018/08/08/模型检测工具汇总/"/>
 
 
 
 
 
-  <title>python计时工具:timeit | 风清望月明</title>
+  <title>模型检测工具汇总 | 风清望月明</title>
   
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://bearhomeng.github.io/2015/08/05/python计时工具/">
+    <link itemprop="mainEntityOfPage" href="https://bearhomeng.github.io/2018/08/08/模型检测工具汇总/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bearhomeng">
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python计时工具:timeit</h1>
+          <h1 class="post-title" itemprop="name headline">模型检测工具汇总</h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-05T21:23:13+08:00">
-                2015-08-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-08T14:16:58+08:00">
+                2018-08-08
               </time>
             
 
@@ -346,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技巧/" itemprop="url" rel="index">
-                    <span itemprop="name">技巧</span>
+                  <a href="/categories/形式化验证/" itemprop="url" rel="index">
+                    <span itemprop="name">形式化验证</span>
                   </a>
                 </span>
 
@@ -377,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  704
+                  1,927
                 </span>
               
 
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  8
                 </span>
               
             </div>
@@ -414,83 +414,278 @@
       
 
       
-        <p>有时候，我们写了一个小程序，自我感觉良好。通常这个时候就会想要测试一下运行的效率。最基本的，就是测量程序的运行时间。</p>
-<h2 id="常规方法"><a href="#常规方法" class="headerlink" title="常规方法"></a>常规方法</h2><p>通常我们会这么做：</p>
-<ol>
-<li>将程序代码封装在一个函数中，然后再主函数中调用它</li>
-<li>在函数调用前打一个时间戳 t1</li>
-<li>在函数调用后打一个时间戳 t2</li>
-<li>最后，计算两个时间戳的差值 t2 - t1</li>
-<li>输出时间差</li>
+        <p>参考 <a href="http://www.yingzinanfei.com/2017/02/01/moxingjiancegongjuhuizong/" target="_blank" rel="noopener">模型检测工具汇总</a></p>
+<h2 id="面向形式化规格语言的模型检测工具"><a href="#面向形式化规格语言的模型检测工具" class="headerlink" title="面向形式化规格语言的模型检测工具"></a>面向形式化规格语言的模型检测工具</h2><h3 id="SMV-Symbolic-Model-Verifier"><a href="#SMV-Symbolic-Model-Verifier" class="headerlink" title="SMV(Symbolic Model Verifier)"></a>SMV(Symbolic Model Verifier)</h3><ul>
+<li>符号模型检测工具</li>
+</ul>
+<ul>
+<li>SMV用以检测一个有限状态系统是否满足CTL公式。</li>
+<li>它的建模方式是以模块为单位，模块可以同步或异步组合，模块描述的基本要素包括非确定性选择，状态转换和并行赋值语句。</li>
+<li>其模型检测的基本方法是以二叉图表示状态转换关系，以计算不动点的方法检测状态的可达性和其所满足的性质。</li>
+<li><a href="http://www.cs.cmu.edu/~modelcheck/smv.html" target="_blank" rel="noopener">http://www.cs.cmu.edu/~modelcheck/smv.html</a></li>
+</ul>
+<h3 id="NuSmv-New-Symbolic-Model-Verifier"><a href="#NuSmv-New-Symbolic-Model-Verifier" class="headerlink" title="NuSmv(New Symbolic Model Verifier)"></a>NuSmv(New Symbolic Model Verifier)</h3><ul>
+<li>新符号模型检测工具</li>
+</ul>
+<ul>
+<li>对SMV重构的一个模型检测工具</li>
+<li>支持计算树逻辑CTL和线性时序逻辑LTL描述的所有规范</li>
+<li>整合了以 SAT 为基础的有界模型检测技术</li>
+<li><a href="http://nusmv.fbk.eu/" target="_blank" rel="noopener">http://nusmv.fbk.eu/</a></li>
+</ul>
+<h3 id="nuXmv"><a href="#nuXmv" class="headerlink" title="nuXmv"></a>nuXmv</h3><ul>
+<li><p>分析同步有限状态和无限状态系统的新符号模型检测工具</p>
+</li>
+<li><p>扩展于NuSMV</p>
+</li>
+<li><p>对于有限状态的情形，nuXmv特点是基于SAT算法的有效验证引擎</p>
+</li>
+<li>对于无限状态的情形，nuXmv特点是基于SMT的验证技术，与MathSAT5紧密集成</li>
+<li><a href="https://nuxmv.fbk.eu/" target="_blank" rel="noopener">https://nuxmv.fbk.eu/</a></li>
+<li>Uppaal(Uppsala University &amp; Aalborg University) 时间自动机的模型检测工具</li>
+<li>建模和模拟及验证实时系统的工具</li>
+<li><a href="http://www.uppaal.org/" target="_blank" rel="noopener">http://www.uppaal.org/</a></li>
+</ul>
+<h3 id="STeP-Stanford-Temporal-Prover"><a href="#STeP-Stanford-Temporal-Prover" class="headerlink" title="STeP(Stanford Temporal Prover)"></a>STeP(Stanford Temporal Prover)</h3><ul>
+<li><p>斯坦福时间验证器</p>
+</li>
+<li><p>用模型检测器处理子系统的验证问题</p>
+</li>
+<li><p>用定理证明器将结果汇总处理</p>
+</li>
+<li>不限于有限状态系统</li>
+<li>用推论方式联合模型检测应用于更广泛的系统，包括无限数据域的程序</li>
+<li><a href="http://www-step.stanford.edu/" target="_blank" rel="noopener">http://www-step.stanford.edu/</a></li>
+</ul>
+<h3 id="CWB-Concurrency-Workbench"><a href="#CWB-Concurrency-Workbench" class="headerlink" title="CWB(Concurrency Workbench)"></a>CWB(Concurrency Workbench)</h3><ul>
+<li><p>适用于并发系统操作与分析的自动化工具</p>
+</li>
+<li><p>可以检测系统模型之间的等价关系、FRE-ORDER关系和系统是否能够满足$\mu$-演算的公式</p>
+</li>
+<li><p>建模方法使用CCS语言或LOTOS语言的子集</p>
+</li>
+<li>能分析给定程序的状态空间及检测多种语义的等价性和序列性</li>
+<li><a href="http://homepages.inf.ed.ac.uk/perdita/cwb/" target="_blank" rel="noopener">http://homepages.inf.ed.ac.uk/perdita/cwb/</a></li>
+</ul>
+<h3 id="VIS-Verification-Interacting-with-Synthesis"><a href="#VIS-Verification-Interacting-with-Synthesis" class="headerlink" title="VIS(Verification Interacting with Synthesis)"></a>VIS(Verification Interacting with Synthesis)</h3><ul>
+<li><p>用于形式验证、综合和模拟有限状态系统的工具</p>
+</li>
+<li><p>能够综合有限状态系统并验证这些系统的属性</p>
+</li>
+<li><p><a href="http://vlsi.colorado.edu/~vis/" target="_blank" rel="noopener">http://vlsi.colorado.edu/~vis/</a></p>
+</li>
+</ul>
+<h2 id="面向源程序语言的模型检测工具"><a href="#面向源程序语言的模型检测工具" class="headerlink" title="面向源程序语言的模型检测工具"></a>面向源程序语言的模型检测工具</h2><h3 id="SPIN-Simple-Promela-Interpreter"><a href="#SPIN-Simple-Promela-Interpreter" class="headerlink" title="SPIN(Simple Promela Interpreter)"></a>SPIN(Simple Promela Interpreter)</h3><ul>
+<li><p>显式模型检测工具</p>
+</li>
+<li><p>SPIN 用以检测一个有限状态系统是否满足PLTL公式及其他一些性质，包括可达性和循环。</p>
+</li>
+<li><p>建模方式是以进程为单位，进程异步组合，进程描述的基本要素包括赋值语句，条件语句，通讯语句，非确定性选择和循环语句。</p>
+</li>
+<li>基本方法是以自动机表示各进程和PLTL公式，以计算这些自动机的组合可接受的语言是否为空的方法检测进程模型是否满足给定的性质。</li>
+<li>建模语言为PROMELA(PROcess MEta LAnguage)，基于进程结构，有类似C语言的结构</li>
+<li><a href="http://spinroot.com/spin/whatispin.html" target="_blank" rel="noopener">http://spinroot.com/spin/whatispin.html</a></li>
+</ul>
+<h3 id="BLAST-Berkeley-Lazy-Abstraction-Software-Verification-Tool"><a href="#BLAST-Berkeley-Lazy-Abstraction-Software-Verification-Tool" class="headerlink" title="BLAST(Berkeley Lazy Abstraction Software Verification Tool)"></a>BLAST(Berkeley Lazy Abstraction Software Verification Tool)</h3><ul>
+<li><p>C 程序的时序安全属性自动验证工具</p>
+</li>
+<li><p>基于反例引导的抽象求精框架对C语言程序进行检测</p>
+</li>
+<li><p>采用懒惰抽象(lazy abstraction)技术，有效地提高了效率</p>
+</li>
+<li><a href="http://cseweb.ucsd.edu/~rjhala/blast.html" target="_blank" rel="noopener">http://cseweb.ucsd.edu/~rjhala/blast.html</a></li>
+</ul>
+<h3 id="SLAM-C程序模型检测工具"><a href="#SLAM-C程序模型检测工具" class="headerlink" title="SLAM C程序模型检测工具"></a>SLAM C程序模型检测工具</h3><ul>
+<li><p>将原C语言程序抽象为布尔程序进程验证工作</p>
+</li>
+<li><p>抽象后的程序仅剩下布尔变量</p>
+</li>
+<li>依靠C2bp,Bebop,Newton3个工具分别负责完成抽象、检测和抽象求精任务</li>
+<li><a href="https://www.microsoft.com/en-us/research/project/slam/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/project/slam/</a></li>
+</ul>
+<h3 id="JPF-Java-Path-Finder"><a href="#JPF-Java-Path-Finder" class="headerlink" title="JPF(Java Path Finder)"></a>JPF(Java Path Finder)</h3><ul>
+<li><p>Java程序验证工具</p>
+</li>
+<li><p>实现了一个 MC-JVM 来解决内存分配和垃圾回收等问题</p>
+</li>
+<li><p><a href="http://babelfish.arc.nasa.gov/trac/jpf" target="_blank" rel="noopener">http://babelfish.arc.nasa.gov/trac/jpf</a></p>
+</li>
+</ul>
+<h3 id="VeriSoft"><a href="#VeriSoft" class="headerlink" title="VeriSoft"></a>VeriSoft</h3><ul>
+<li>直接测试 C 源代码</li>
+</ul>
+<h3 id="Eraser"><a href="#Eraser" class="headerlink" title="Eraser"></a>Eraser</h3><ul>
+<li>能够检测 Java 代码</li>
+</ul>
+<h3 id="Jchecker"><a href="#Jchecker" class="headerlink" title="Jchecker"></a>Jchecker</h3><ul>
+<li><p>C 程序模型检测工具</p>
+</li>
+<li><p>基于谓词抽象理论</p>
+</li>
+<li><p>采用基于谓词抽象的反例引导的抽象求精框架</p>
+</li>
+<li>能够针对C程序源码抽象出模型并完备地搜索其状态空间，以此验证程序的安全属性</li>
+<li>最大限度缩减状态空间</li>
+</ul>
+<h3 id="Bandera"><a href="#Bandera" class="headerlink" title="Bandera"></a>Bandera</h3><ul>
+<li><p>并发Java程序的模型检测工具</p>
+</li>
+<li><p>工具平台</p>
+</li>
+<li><p>基于程序切片技术，将Java程序转换成中间代码</p>
+</li>
+<li>后端接口适应多种模型检测器，包括SPIN和SMV</li>
+<li><a href="http://bandera.projects.cs.ksu.edu/" target="_blank" rel="noopener">http://bandera.projects.cs.ksu.edu/</a></li>
+</ul>
+<h3 id="Klocwork-InsightPro"><a href="#Klocwork-InsightPro" class="headerlink" title="Klocwork InsightPro"></a>Klocwork InsightPro</h3><ul>
+<li>可以检测多种语言类型的多种质量缺陷和安全漏洞</li>
+</ul>
+<h3 id="CMC"><a href="#CMC" class="headerlink" title="CMC"></a>CMC</h3><ul>
+<li>可以检测C语言程序在执行时OS层级的调度</li>
+</ul>
+<h3 id="MaceMC"><a href="#MaceMC" class="headerlink" title="MaceMC"></a>MaceMC</h3><ul>
+<li><p>用于检测分布式系统</p>
+</li>
+<li><p><a href="http://www.macesystems.org/wiki/macemc" target="_blank" rel="noopener">http://www.macesystems.org/wiki/macemc</a></p>
+</li>
+</ul>
+<h3 id="Chess"><a href="#Chess" class="headerlink" title="Chess"></a>Chess</h3><ul>
+<li><p>用于检测多线程的Windows程序</p>
+</li>
+<li><p><a href="https://www.microsoft.com/en-us/research/project/chess-find-and-reproduce-heisenbugs-in-concurrent-programs/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/project/chess-find-and-reproduce-heisenbugs-in-concurrent-programs/</a></p>
+</li>
+</ul>
+<h3 id="FDR"><a href="#FDR" class="headerlink" title="FDR"></a>FDR</h3><ul>
+<li><a href="https://www.cs.ox.ac.uk/projects/fdr/" target="_blank" rel="noopener">https://www.cs.ox.ac.uk/projects/fdr/</a></li>
+</ul>
+<h3 id="Murphi"><a href="#Murphi" class="headerlink" title="Murphi"></a>Murphi</h3><ul>
+<li><p>一种枚举显示状态的模型检测器，针对C语言</p>
+</li>
+<li><p><a href="http://formalverification.cs.utah.edu/Murphi/" target="_blank" rel="noopener">http://formalverification.cs.utah.edu/Murphi/</a></p>
+</li>
+</ul>
+<h3 id="MoonWalker"><a href="#MoonWalker" class="headerlink" title="MoonWalker"></a>MoonWalker</h3><ul>
+<li>针对.NET应用的模型检测工具</li>
+</ul>
+<h3 id="XMC"><a href="#XMC" class="headerlink" title="XMC"></a>XMC</h3><ul>
+<li>对JAVA程序中同步操作算法检测</li>
+</ul>
+<h3 id="FLAVERS-FLow-Analysis-for-VERification-of-Systems"><a href="#FLAVERS-FLow-Analysis-for-VERification-of-Systems" class="headerlink" title="FLAVERS(FLow Analysis for VERification of Systems)"></a>FLAVERS(FLow Analysis for VERification of Systems)</h3><ul>
+<li>针对ADA语言的工具</li>
+<li><a href="http://formalverification.cs.utah.edu/Murphi/" target="_blank" rel="noopener">http://formalverification.cs.utah.edu/Murphi/</a></li>
+</ul>
+<h3 id="Mocha"><a href="#Mocha" class="headerlink" title="Mocha"></a>Mocha</h3><ul>
+<li><p>针对C语言的模型检测工具</p>
+</li>
+<li><p><a href="https://www.cis.upenn.edu/~mocha/" target="_blank" rel="noopener">https://www.cis.upenn.edu/~mocha/</a></p>
+</li>
+</ul>
+<h3 id="CBMC"><a href="#CBMC" class="headerlink" title="CBMC"></a>CBMC</h3><ul>
+<li><p>针对C语言/C++的模型检测工具</p>
+</li>
+<li><p><a href="http://www.cprover.org/cbmc/" target="_blank" rel="noopener">http://www.cprover.org/cbmc/</a></p>
+</li>
+</ul>
+<h3 id="MAGIC-Modular-Analysis-of-proGrams-In-C"><a href="#MAGIC-Modular-Analysis-of-proGrams-In-C" class="headerlink" title="MAGIC(Modular Analysis of proGrams In C)"></a>MAGIC(Modular Analysis of proGrams In C)</h3><ul>
+<li><p>针对C语言的模型检测工具</p>
+</li>
+<li><p><a href="http://www.cs.cmu.edu/~chaki/magic/" target="_blank" rel="noopener">http://www.cs.cmu.edu/~chaki/magic/</a></p>
+</li>
+</ul>
+<h2 id="其他模型检测工具"><a href="#其他模型检测工具" class="headerlink" title="其他模型检测工具"></a>其他模型检测工具</h2><ol>
+<li><p>OFMC 一种用于安全协议的符号模型检测工具</p>
+</li>
+<li><p>CoPS 持久安全性检测器</p>
+</li>
+<li>Rational Tau</li>
+<li>F-Soft</li>
+<li>IMPACT</li>
+<li>Astree analysis tool</li>
+<li>Saturn</li>
+<li>Calysto</li>
+<li>Terminator</li>
+<li>SATABS</li>
+<li>Terminator</li>
+<li>mCRL2(micro Common Representation Language) 并发系统检测工具</li>
+<li>LTSA(Labeled Transition System Analyzer) 并发系统检测工具</li>
+<li>Maude 基于逻辑语义的工具</li>
+<li>ISP MPI程序的检测工具</li>
+<li>CHIC(Checker for Interface Compatibility) 模块行为兼容性的验证工具</li>
+<li>MRMC(Markov Reward Model) 对离散和连续时间的马尔可夫激励模型</li>
+<li>UMLChecker UML模型检测工具</li>
+<li>BACH(Bounded ReachAblity CHecker) 用于分析线性混成自动机有界可达性分析</li>
+<li>LDPChecker 针对正环闭合自动机(Positive Loop-closed Automata)检验线性时段性质</li>
+<li>QRDChecker 针对时段时序逻辑QRDC(Quantified Restrictred Duration Calculs)的检验工具</li>
+<li>Kronos</li>
+<li>HyTech</li>
+<li>AUTOABS</li>
+<li>FeaVer</li>
+<li>3VMC</li>
+<li>aSpin</li>
 </ol>
-<h3 id="利用time模块（不推荐）。"><a href="#利用time模块（不推荐）。" class="headerlink" title="利用time模块（不推荐）。"></a>利用time模块（不推荐）。</h3><h4 id="time-localtime-time-time-time-clock-对比："><a href="#time-localtime-time-time-time-clock-对比：" class="headerlink" title="time.localtime(),  time.time(),  time.clock() 对比："></a>time.localtime(),  time.time(),  time.clock() 对比：</h4><ul>
-<li><p>time.localtime()，localtime返回的是struct_time，包含年月日，显然没有必要，更重要的是localtime()的精度依赖于time()</p>
+<h2 id="其他分类方式"><a href="#其他分类方式" class="headerlink" title="其他分类方式"></a>其他分类方式</h2><ul>
+<li>结合模型检测与定理证明<ul>
+<li>STeP</li>
+</ul>
 </li>
-<li><p>time.time()，time返回的是UTC时间（seconds since the 00:00:00 UTC on January 1）。在很多系统，包括windows下精度很差，win32下的精度只有1/18.2秒。不过在Unix/Linux系统下，time()的精度还是很高的。</p>
+<li>符号模型检测<ul>
+<li>用有序二叉图OBDDs(Ordered Binary Decision Diagrams)描述状态迁移图</li>
+<li>用布尔逻辑公式描述系统属性</li>
+</ul>
 </li>
-<li><p>Python的标准库手册推荐在任何系统下都尽量使用time.clock()。不过要注意是在win32系统下，这个函数返回的是真实时间（wall time），而在Unix/Linux下返回的是CPU时间。在win32下，这个函数的时间分辨率好于1微秒。</p>
+<li>定界模型检测技术(bounded model checking)<ul>
+<li>依赖于布尔可满足性问题(boolean satisfiability problem, SAT)的求解器</li>
+<li>在限定步数k内，确定系统是否满足性质。</li>
+<li>若不能确定，则增加k值，重新进行验证</li>
+</ul>
+</li>
+<li>其他分类方式<ul>
+<li>基于自动机理论<ul>
+<li>SPIN</li>
+</ul>
+</li>
+<li>基于不动点定理<ul>
+<li>SMV</li>
+</ul>
 </li>
 </ul>
-<h4 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h4><pre><code># -*- coding: utf-8 -*-
-#!/bin/env python
-def test():
-    L=[]
-    for i in range(100):
-        L.append(i)
-if __name__==&apos;__main__&apos;:
-    from time import clock
-    start=clock()
-    for i in range(10000):
-        test()
-    finish=clock()
-    print (finish-start)/10000
-</code></pre><h4 id="执行结果为"><a href="#执行结果为" class="headerlink" title="执行结果为"></a>执行结果为</h4><pre><code>0.00032365431221
-</code></pre><p>这样倒是没什么问题，但有时候就比较麻烦，比如想要测试多次，就需要再套一层循环。</p>
-<p>而在 <code>python</code> 中，提供了一个名为 <code>timeit</code> 的计时工具。</p>
-<h2 id="timeit模块"><a href="#timeit模块" class="headerlink" title="timeit模块"></a>timeit模块</h2><h3 id="Timer"><a href="#Timer" class="headerlink" title="Timer"></a>Timer</h3><p><code>timeit</code> 模块定义了一个 <code>Timer类</code>。该类接收两个参数。</p>
-<ul>
-<li>第一个参数，是你要计时的语句和函数；</li>
-<li>第二个参数，是为第一个参数语句构建环境的导入语句</li>
+</li>
 </ul>
-<p>创建 <code>Timer</code> 类后，即可调用 <code>timeit</code> 方法进行计时。</p>
-<ul>
-<li>接受一个参数作为被计时语句的调用次数，默认为一百万次</li>
-<li>返回所耗费的秒数</li>
+<h2 id="其他分类方式-1"><a href="#其他分类方式-1" class="headerlink" title="其他分类方式"></a>其他分类方式</h2><ul>
+<li>针对实时系统的模型检测工具<ul>
+<li>UPPAAL, Kronos, STeP</li>
 </ul>
-<p>另一个可以调用的方法为 <code>repeat</code> 。</p>
-<ul>
-<li>接收两个参数。第一个参数为整个测试试验的次数，第二个参数为测试的次数。</li>
-<li>返回每次试验的结果</li>
+</li>
+<li>针对并发系统的模型检测工具<ul>
+<li>Spin, JPF, Verisoft</li>
 </ul>
-<h4 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h4><pre><code># -*- coding: utf-8 -*-
-#!/bin/env python
-def test1():
-    n=0
-    for i in range(101):
-        n+=i
-    return n
-def test2():
-    return sum(range(101))
-def test3():
-    return sum(x for x in range(101))
-if __name__==&apos;__main__&apos;:
-    from timeit import Timer
-    t1=Timer(&quot;test1()&quot;,&quot;from __main__ import test1&quot;)
-    t2=Timer(&quot;test2()&quot;,&quot;from __main__ import test2&quot;)
-    t3=Timer(&quot;test3()&quot;,&quot;from __main__ import test3&quot;)
-    print t1.timeit(10000)
-    print t2.timeit(10000)
-    print t3.timeit(10000)
-    print t1.repeat(3,10000)
-    print t2.repeat(3,10000)
-    print t3.repeat(3,10000)
-</code></pre><h4 id="结果如下"><a href="#结果如下" class="headerlink" title="结果如下"></a>结果如下</h4><pre><code>3.21831489756
-0.109082858296
-4.83077821343
-[3.2328774327463403, 3.200496361967792, 3.219513164382626]
-[0.11024445844373787, 0.10911708052280389, 0.10891761383080834]
-[4.817947811802895, 4.892466221265554, 5.003930946530911]
-</code></pre>
+</li>
+<li>针对混成系统的模型检测工具<ul>
+<li>HyTech, HySAT, BACH, LDPChecker</li>
+</ul>
+</li>
+<li>模型检测的步骤：</li>
+<li>抽象出系统的数学模型<ul>
+<li>迁移系统</li>
+<li>马尔可夫链</li>
+<li>Kripke结构</li>
+</ul>
+</li>
+<li>给出能够描述该系统性质的语言</li>
+<li>线性时序逻辑LTL<ul>
+<li>关心系统的任意一次运行中的状态以及它们之间的关系</li>
+</ul>
+</li>
+<li>分支时序逻辑CTL<ul>
+<li>分叉时序逻辑，用来描述状态的前后关系和分支情况</li>
+</ul>
+</li>
+<li>$\mu$-演算<ul>
+<li>关心系统的动作与状态之间的关系</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -515,7 +710,7 @@ if __name__==&apos;__main__&apos;:
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
+            <a href="/tags/工具-模型检测-形式化验证/" rel="tag"># 工具,模型检测,形式化验证</a>
           
         </div>
       
@@ -528,8 +723,8 @@ if __name__==&apos;__main__&apos;:
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/08/03/一小时掌握sqlite/" rel="next" title="一小时掌握sqlite">
-                <i class="fa fa-chevron-left"></i> 一小时掌握sqlite
+              <a href="/2018/07/26/Hexo博客Next主题优化总结/" rel="next" title="Hexo博客Next主题优化总结">
+                <i class="fa fa-chevron-left"></i> Hexo博客Next主题优化总结
               </a>
             
           </div>
@@ -537,10 +732,6 @@ if __name__==&apos;__main__&apos;:
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/08/07/mysql常用命令/" rel="prev" title="mysql常用命令">
-                mysql常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -672,7 +863,7 @@ if __name__==&apos;__main__&apos;:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常规方法"><span class="nav-number">1.</span> <span class="nav-text">常规方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#利用time模块（不推荐）。"><span class="nav-number">1.1.</span> <span class="nav-text">利用time模块（不推荐）。</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#time-localtime-time-time-time-clock-对比："><span class="nav-number">1.1.1.</span> <span class="nav-text">time.localtime(),  time.time(),  time.clock() 对比：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例"><span class="nav-number">1.1.2.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#执行结果为"><span class="nav-number">1.1.3.</span> <span class="nav-text">执行结果为</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#timeit模块"><span class="nav-number">2.</span> <span class="nav-text">timeit模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Timer"><span class="nav-number">2.1.</span> <span class="nav-text">Timer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#代码示例-1"><span class="nav-number">2.1.1.</span> <span class="nav-text">代码示例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果如下"><span class="nav-number">2.1.2.</span> <span class="nav-text">结果如下</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向形式化规格语言的模型检测工具"><span class="nav-number">1.</span> <span class="nav-text">面向形式化规格语言的模型检测工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SMV-Symbolic-Model-Verifier"><span class="nav-number">1.1.</span> <span class="nav-text">SMV(Symbolic Model Verifier)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NuSmv-New-Symbolic-Model-Verifier"><span class="nav-number">1.2.</span> <span class="nav-text">NuSmv(New Symbolic Model Verifier)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nuXmv"><span class="nav-number">1.3.</span> <span class="nav-text">nuXmv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#STeP-Stanford-Temporal-Prover"><span class="nav-number">1.4.</span> <span class="nav-text">STeP(Stanford Temporal Prover)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CWB-Concurrency-Workbench"><span class="nav-number">1.5.</span> <span class="nav-text">CWB(Concurrency Workbench)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VIS-Verification-Interacting-with-Synthesis"><span class="nav-number">1.6.</span> <span class="nav-text">VIS(Verification Interacting with Synthesis)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向源程序语言的模型检测工具"><span class="nav-number">2.</span> <span class="nav-text">面向源程序语言的模型检测工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SPIN-Simple-Promela-Interpreter"><span class="nav-number">2.1.</span> <span class="nav-text">SPIN(Simple Promela Interpreter)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BLAST-Berkeley-Lazy-Abstraction-Software-Verification-Tool"><span class="nav-number">2.2.</span> <span class="nav-text">BLAST(Berkeley Lazy Abstraction Software Verification Tool)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SLAM-C程序模型检测工具"><span class="nav-number">2.3.</span> <span class="nav-text">SLAM C程序模型检测工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JPF-Java-Path-Finder"><span class="nav-number">2.4.</span> <span class="nav-text">JPF(Java Path Finder)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VeriSoft"><span class="nav-number">2.5.</span> <span class="nav-text">VeriSoft</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eraser"><span class="nav-number">2.6.</span> <span class="nav-text">Eraser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Jchecker"><span class="nav-number">2.7.</span> <span class="nav-text">Jchecker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Bandera"><span class="nav-number">2.8.</span> <span class="nav-text">Bandera</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Klocwork-InsightPro"><span class="nav-number">2.9.</span> <span class="nav-text">Klocwork InsightPro</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMC"><span class="nav-number">2.10.</span> <span class="nav-text">CMC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MaceMC"><span class="nav-number">2.11.</span> <span class="nav-text">MaceMC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chess"><span class="nav-number">2.12.</span> <span class="nav-text">Chess</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FDR"><span class="nav-number">2.13.</span> <span class="nav-text">FDR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Murphi"><span class="nav-number">2.14.</span> <span class="nav-text">Murphi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MoonWalker"><span class="nav-number">2.15.</span> <span class="nav-text">MoonWalker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XMC"><span class="nav-number">2.16.</span> <span class="nav-text">XMC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FLAVERS-FLow-Analysis-for-VERification-of-Systems"><span class="nav-number">2.17.</span> <span class="nav-text">FLAVERS(FLow Analysis for VERification of Systems)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mocha"><span class="nav-number">2.18.</span> <span class="nav-text">Mocha</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CBMC"><span class="nav-number">2.19.</span> <span class="nav-text">CBMC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAGIC-Modular-Analysis-of-proGrams-In-C"><span class="nav-number">2.20.</span> <span class="nav-text">MAGIC(Modular Analysis of proGrams In C)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他模型检测工具"><span class="nav-number">3.</span> <span class="nav-text">其他模型检测工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他分类方式"><span class="nav-number">4.</span> <span class="nav-text">其他分类方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他分类方式-1"><span class="nav-number">5.</span> <span class="nav-text">其他分类方式</span></a></li></ol></div>
             
 
           </div>
